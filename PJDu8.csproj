@@ -398,6 +398,14 @@
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.html" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\js\breakpoints.min.js" />
+    <Content Include="assets\js\browser.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\util.js" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -419,6 +427,13 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\banner.mp4" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\cta01.jpg" />
+    <Content Include="images\pic01.jpg" />
+    <Content Include="images\pic02.jpg" />
+    <Content Include="images\pic03.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -437,6 +452,43 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\sass\base\_page.scss" />
+    <Content Include="assets\sass\base\_reset.scss" />
+    <Content Include="assets\sass\base\_typography.scss" />
+    <Content Include="assets\sass\components\_actions.scss" />
+    <Content Include="assets\sass\components\_box.scss" />
+    <Content Include="assets\sass\components\_button.scss" />
+    <Content Include="assets\sass\components\_form.scss" />
+    <Content Include="assets\sass\components\_grid.scss" />
+    <Content Include="assets\sass\components\_highlights.scss" />
+    <Content Include="assets\sass\components\_icon.scss" />
+    <Content Include="assets\sass\components\_icons.scss" />
+    <Content Include="assets\sass\components\_image.scss" />
+    <Content Include="assets\sass\components\_inner.scss" />
+    <Content Include="assets\sass\components\_list.scss" />
+    <Content Include="assets\sass\components\_table.scss" />
+    <Content Include="assets\sass\components\_testimonials.scss" />
+    <Content Include="assets\sass\components\_wrapper.scss" />
+    <Content Include="assets\sass\layout\_banner.scss" />
+    <Content Include="assets\sass\layout\_cta.scss" />
+    <Content Include="assets\sass\layout\_footer.scss" />
+    <Content Include="assets\sass\layout\_header.scss" />
+    <Content Include="assets\sass\layout\_heading.scss" />
+    <Content Include="assets\sass\layout\_main.scss" />
+    <Content Include="assets\sass\layout\_menu.scss" />
+    <Content Include="assets\sass\libs\_breakpoints.scss" />
+    <Content Include="assets\sass\libs\_flexgrid.scss" />
+    <Content Include="assets\sass\libs\_functions.scss" />
+    <Content Include="assets\sass\libs\_grid.scss" />
+    <Content Include="assets\sass\libs\_mixins.scss" />
+    <Content Include="assets\sass\libs\_vars.scss" />
+    <Content Include="assets\sass\libs\_vendor.scss" />
+    <Content Include="assets\sass\main.scss" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -447,6 +499,9 @@
     <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
+    <Content Include="Views\HomePage.cshtml" />
+    <Content Include="Views\master.cshtml" />
+    <Content Include="Views\SimpleContentPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -473,7 +528,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49930</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/PJDu8</IISUrl>
+          <IISUrl>http://patrick.davis</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
