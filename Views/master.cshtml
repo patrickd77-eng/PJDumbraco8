@@ -2,7 +2,6 @@
 @{
 	Layout = null;
 }
-
 <!DOCTYPE HTML>
 
 <html>
@@ -13,72 +12,39 @@
 		<meta name="description" content="Portfolio website for junior developer Patrick Davis who is based in Bournemouth. Built in Umbraco." />
 		<meta name="keywords" content="developer,repair,computer,tech,junior,bournemouth,patrick,davis" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
-	   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-	</head>
-		<body class="is-preload">
-	<!-- Header -->
-			<header id="header">
-				<a class="logo" href="/">PJD | Portfolio</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="/">Home</a></li>
-					<li><a href="/Contact-me">Contact</a></li>
-					<li><a href="/About-me">About Me</a></li>
-					<li><a href="/pc-builds">Computer Repair or Builds</a></li>
-					<li><a href="/projects">My Projects</a></li>
-				</ul>
-			</nav>
-			
-		<!-- Body -->
-		@RenderBody()
-			
-	<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<div class="content">
-					
-					<section>
-						<h4>Sitemap</h4>
-						<ul class="alt">
-							<li><a href="/">Home</a></li>
-							<li><a href="/About-me">About</a></li>
-							<li><a href="/Contact-me">Contact</a></li>
-							<li><a href="/PC-Builds">PC Repairs</a></li>
-							<li><a href="/Projects">Projects</a></li>
-						</ul>
-					</section>
-					<section>
-						<h4>Networks</h4>
-						<ul class="plain">
-							<li><a target="_blank" href="https://www.linkedin.com/in/pdavis97"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a></li>
-							<li><a target="_blank" href="https://www.facebook.com/PJD97"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-							<li><a target="_blank" href="https://github.com/patrickd77-eng"><i class="icon fa-github">&nbsp;</i>GitHub</a></li>
-						</ul>
-					</section>
-				</div>
-				<div class="copyright">
-				<p>@Model.Value("footerText", fallback: Fallback.ToAncestors)</p>
-				</div>
-			</div>
-		</footer>
-
-    		<!-- Scripts -->
-    			<script src="/assets/js/jquery.min.js"></script>
-    			<script src="/assets/js/browser.min.js"></script>
-    			<script src="/assets/js/breakpoints.min.js"></script>
-    			<script src="/assets/js/util.js"></script>
-    			<script src="/assets/js/main.js"></script>
+</head>
+	<body class="is-preload">
+            <!-- Header -->  
+            @Html.Partial("_Header")
+        			
+        	<!-- Body -->
+        	@RenderBody()
+        	
+        	<!-- Footer -->		
+            @Html.Partial("_Footer")
+        
+        	<!-- Scripts -->
+        		<script src="/assets/js/jquery.min.js"></script>
+        		<script src="/assets/js/browser.min.js"></script>
+        		<script src="/assets/js/breakpoints.min.js"></script>
+        		<script src="/assets/js/util.js"></script>
+        		<script src="/assets/js/main.js"></script>
 		</body>
 </html>

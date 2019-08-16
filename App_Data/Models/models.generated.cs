@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "baffaa4c0a2e6b67")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "66f9577e15fb836c")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
@@ -50,21 +50,21 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// BodyText: The body content
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("bodyText")]
-		public IHtmlString BodyText => this.Value<IHtmlString>("bodyText");
-
-		///<summary>
-		/// FooterText: Copyright notice for the footer
+		/// Footer Text: Copyright notice for the footer
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerText")]
 		public string FooterText => this.Value<string>("footerText");
 
 		///<summary>
-		/// PageTitle: The page's title
+		/// Page Banner Sub Title: The body content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageSubTitle")]
+		public IHtmlString PageSubTitle => this.Value<IHtmlString>("pageSubTitle");
+
+		///<summary>
+		/// Page Banner Title: The page's title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTitle")]
