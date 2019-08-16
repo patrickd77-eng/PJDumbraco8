@@ -1811,7 +1811,7 @@ ul.icons {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: url("../../images/banner.jpg");
+  /*background-image: url("../../images/banner.jpg");*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1963,7 +1963,7 @@ ul.icons {
     -ms-transition: opacity 1s ease, -ms-transform 1s ease;
     transition: opacity 1s ease, transform 1s ease;
     opacity: 1;
-    position: relative;
+    position: absolute;
     z-index: 3; }
     #banner > .inner > :last-child {
       margin-bottom: 0; }
@@ -1977,7 +1977,7 @@ ul.icons {
     text-decoration: none; }
     #banner a:hover {
       color: #ffffff; }
-  #banner video {
+  #banner img {
     -moz-transform: translateX(50%) translateY(50%);
     -webkit-transform: translateX(50%) translateY(50%);
     -ms-transform: translateX(50%) translateY(50%);
@@ -2208,7 +2208,7 @@ ul.icons {
 #footer {
   background-color: #111111;
   color: rgba(255, 255, 255, 0.5);
-  padding: 8rem 0 6rem 0 ; }
+  padding: 2rem 0 2rem 0 ; }
   #footer input, #footer select, #footer textarea {
     color: #ffffff; }
   #footer a {
@@ -2437,7 +2437,7 @@ body {
     padding: 0 1.25rem;
     text-decoration: none; }
   #header > nav > a {
-    color: inherit;
+    color: white;
     display: inline-block;
     padding: 0 0.75rem;
     text-decoration: none; }
@@ -2765,7 +2765,7 @@ body {
         #menu > ul.links > li > a {
           border: 0;
           border-top: solid 1px rgba(255, 255, 255, 0.25);
-          color: inherit;
+          color: white;
           display: block;
           line-height: 3.5rem;
           text-decoration: none; }
