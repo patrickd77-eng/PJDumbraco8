@@ -21,6 +21,7 @@ namespace PJDu8.Web.Models
         public NavigationListItem(string text)
         {
             Text = text;
+
         }
     }
 }

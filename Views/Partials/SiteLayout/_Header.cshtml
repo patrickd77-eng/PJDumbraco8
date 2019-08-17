@@ -1,6 +1,7 @@
-﻿<!-- Header -->
-<header id="header">
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<List<NavigationListItem>>
+@using PJDu8.Web.Models
 
+<header id="header">
     <a class="logo" href="/">PJD</a>
     <nav>
         <a href="#menu">Menu</a>
@@ -13,9 +14,6 @@
         @RenderChildItems(Model)
     </ul>
 </nav>
-
-@inherits Umbraco.Web.Mvc.UmbracoViewPage<List<NavigationListItem>>
-@using PJDu8.Web.Models
 
 @helper RenderChildItems(List<NavigationListItem> listItems)
 {
@@ -30,17 +28,16 @@
                 }
                 else if (item.Link != null)
                 {
-                    <a href="@item.Link.Url" class="@(Umbraco.AssignedContentItem.Url == item.Link.Url ? "active" : null) @(item.HasChildren ? "header" : null)" target="@item.Link.Target">@item.Link.Text</a>
+                    <a href="@item.Link.Url" class="@(Umbraco.AssignedContentItem.Url == item.Link.Url ? "active" : null) @(item.HasChildren ? "hasChildren" : null)" target="@item.Link.Target">@item.Link.Text</a>
                 }
 
                 @if (item.HasChildren)
                 {
-                    <ul class="sub-menu">
+                    <ol style="list-style:square !important">
                         @RenderChildItems(item.Items)
-                    </ul>
+                    </ol>
                 }
             </li>
-
         }
     }
 }
