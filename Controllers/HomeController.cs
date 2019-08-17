@@ -16,10 +16,6 @@ namespace PJDu8.Controllers
         {
             return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Highlights.cshtml");
         }
-        public ActionResult RenderCTA()
-        {
-            return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_CTA.cshtml");
-        }
 
     }
 }

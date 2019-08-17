@@ -1,15 +1,5 @@
 ﻿@{
     Layout = "Master.cshtml";
 }
-<!-- CTA -->
-@{ Html.RenderAction("RenderCTA", "Home");}
-<!-- Main -->
-
-<section id="main" class="inner">
-    <div class="content">
-        <header class="major special">
-            <h2>Test</h2>
-            <p>Test</p>
-        </header>
-    </div>
-</section>
+@{ Html.RenderAction("RenderCTA", "SiteLayout");}
+@{ Html.RenderAction("RenderBodyText", "Content");}

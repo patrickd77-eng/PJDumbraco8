@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Umbraco.Web.Mvc;
+﻿using Umbraco.Web.Mvc;
 using System.Web.Mvc;
 
 namespace PJDu8.Controllers
@@ -22,6 +18,10 @@ namespace PJDu8.Controllers
         public ActionResult RenderFooter()
         {
             return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Footer.cshtml");
+        }
+        public ActionResult RenderCTA()
+        {
+            return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_CTA.cshtml");
         }
     }
 }

@@ -1,28 +1,25 @@
-﻿@{
+﻿@using System.Web.Optimization
+@{
     Layout = null;
 }
 <!DOCTYPE HTML>
 <html>
 <!-- Head (meta) -->
-@{ Html.RenderAction("RenderHeadHtml", "SiteLayout");}
-
+<head>
+    @{ Html.RenderAction("RenderHeadHtml", "SiteLayout");}
+</head>
 <body class="is-preload">
     <!-- Header -->
     @{ Html.RenderAction("RenderNavigation", "SiteLayout");}
-
-        <!-- Body -->
-        @RenderBody()
-
+    <!-- Body -->
+    @RenderBody()
     <!-- Footer -->
     @{ Html.RenderAction("RenderFooter", "SiteLayout");}
-
     <!-- Scripts -->
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/browser.min.js"></script>
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
-
 </body>
-
 </html>
