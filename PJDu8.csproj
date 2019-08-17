@@ -468,6 +468,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SiteLayoutController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -535,6 +537,13 @@
     <Content Include="Views\master.cshtml" />
     <Content Include="Views\SimpleContentPage.cshtml" />
     <Content Include="site.webmanifest" />
+    <Content Include="Views\projects.cshtml" />
+    <Content Include="Views\Partials\SiteLayout\_Header.cshtml" />
+    <Content Include="Views\Partials\SiteLayout\_Footer.cshtml" />
+    <Content Include="Views\Partials\Home\_Banner.cshtml" />
+    <Content Include="Views\Partials\SiteLayout\_Head.cshtml" />
+    <Content Include="Views\Partials\Home\_Highlights.cshtml" />
+    <Content Include="Views\Partials\Home\_CTA.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -546,6 +555,7 @@
     <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "66f9577e15fb836c")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "56c313919215ea8b")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -66,11 +66,18 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Footer Text: Copyright notice for the footer
+		/// Card Header: The H2 for the white card like section.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("footerText")]
-		public string FooterText => this.Value<string>("footerText");
+		[ImplementPropertyType("cardHeader")]
+		public string CardHeader => this.Value<string>("cardHeader");
+
+		///<summary>
+		/// Card Header Sub Text: Text beneath header text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cardHeaderSubText")]
+		public IHtmlString CardHeaderSubText => this.Value<IHtmlString>("cardHeaderSubText");
 
 		///<summary>
 		/// Page Banner Sub Title: The body content
@@ -158,6 +165,20 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Page Header: Page Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("projectPageHeader")]
+		public string ProjectPageHeader => this.Value<string>("projectPageHeader");
+
+		///<summary>
+		/// Page Sub Title: Text below header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("projectPageSubTitle")]
+		public IHtmlString ProjectPageSubTitle => this.Value<IHtmlString>("projectPageSubTitle");
 	}
 
 	/// <summary>Folder</summary>
