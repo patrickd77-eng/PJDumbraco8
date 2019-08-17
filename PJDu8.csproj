@@ -479,6 +479,7 @@
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\SiteLayoutController.cs" />
     <Compile Include="Models\NavigationLink.cs" />
+    <Compile Include="Models\NavigationLinkItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

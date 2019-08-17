@@ -1,19 +1,45 @@
 ﻿<!-- Header -->
-		<header id="header">
-		    
-			<a class="logo" href="/">PJD</a>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+<header id="header">
 
-	<!-- Nav -->
-		<nav id="menu">
-			<ul class="links">
-				<li><a href="/">Home</a></li>
-				<li><a href="/Contact-me">Contact</a></li>
-				<li><a href="/About-me">About Me</a></li>
-				<li><a href="/pc-builds">Computer Repair or Builds</a></li>
-				<li><a href="/projects">My Projects</a></li>
-			</ul>
-		</nav>
+    <a class="logo" href="/">PJD</a>
+    <nav>
+        <a href="#menu">Menu</a>
+    </nav>
+</header>
+
+<!-- Nav -->
+<nav id="menu" role="navigation">
+    <ul class="links">
+        @RenderChildItems(Model)
+    </ul>
+</nav>
+
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<List<NavigationListItem>>
+@using PJDu8.Web.Models
+
+@helper RenderChildItems(List<NavigationListItem> listItems)
+{
+    if (listItems != null)
+    {
+        foreach (var item in listItems)
+        {
+            <li>
+                @if (!String.IsNullOrEmpty(item.Text))
+                {
+                    @item.Text
+                }
+                else if (item.Link != null)
+                {
+                    <a href="@item.Link.Url" class="@(Umbraco.AssignedContentItem.Url == item.Link.Url ? "active" : null) @(item.HasChildren ? "header" : null)" target="@item.Link.Target">@item.Link.Text</a>
+                }
+
+                @if (item.HasChildren)
+                {
+                    <ul class="sub-menu">
+                        @RenderChildItems(item.Items)
+                    </ul>
+                }
+            </li>
+        }
+    }
+}
