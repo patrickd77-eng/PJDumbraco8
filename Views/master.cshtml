@@ -1,5 +1,4 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
-@{
+﻿@{
     Layout = null;
 }
 <!DOCTYPE HTML>
@@ -11,10 +10,8 @@
     <!-- Header -->
     @{ Html.RenderAction("RenderNavigation", "SiteLayout");}
 
-   
-
-    <!-- Body -->
-    @RenderBody()
+        <!-- Body -->
+        @RenderBody()
 
     <!-- Footer -->
     @{ Html.RenderAction("RenderFooter", "SiteLayout");}
@@ -25,5 +22,7 @@
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
+
 </body>
+
 </html>

@@ -23,8 +23,5 @@ namespace PJDu8.Controllers
         {
             return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Footer.cshtml");
         }
-      
-
-
     }
 }
