@@ -4326,7 +4326,8 @@ body {
                 }
 
                     #menu > ul.links > li > a.active {
-                        background-color: #272727;
+                        /*background-color: #272727;*/
+                        color: red !important;
                     }
 
                     #menu > ul.links > li > a:hover {
