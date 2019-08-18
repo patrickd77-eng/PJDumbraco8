@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4e39f9ae33aa765b")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "bafff3a2edb012fe")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -64,6 +64,55 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Banner Sub Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("bannerSubTitle")]
+		public string BannerSubTitle => this.Value<string>("bannerSubTitle");
+
+		///<summary>
+		/// Banner Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("bannerTitle")]
+		public string BannerTitle => this.Value<string>("bannerTitle");
+
+		///<summary>
+		/// Card Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cardImage")]
+		public IPublishedContent CardImage => this.Value<IPublishedContent>("cardImage");
+
+		///<summary>
+		/// Card Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cardText")]
+		public string CardText => this.Value<string>("cardText");
+
+		///<summary>
+		/// Card Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cardTitle")]
+		public string CardTitle => this.Value<string>("cardTitle");
+
+		///<summary>
+		/// CTA Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAHeader")]
+		public string CTaheader => this.Value<string>("cTAHeader");
+
+		///<summary>
+		/// CTA Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAText")]
+		public string CTatext => this.Value<string>("cTAText");
 	}
 
 	/// <summary>Content Page</summary>
