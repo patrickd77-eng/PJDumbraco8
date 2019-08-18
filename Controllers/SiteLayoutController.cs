@@ -3,6 +3,11 @@ using System.Web.Mvc;
 using Umbraco.Web.Mvc;
 using PJDu8.Web.Models;
 using Umbraco.Core.Models.PublishedContent;
+using System.Runtime.Caching;
+using System;
+using Umbraco.Web;
+using Umbraco.Core;
+using System.Linq;
 
 namespace PJDu8.Controllers
 {
@@ -21,7 +26,7 @@ namespace PJDu8.Controllers
 
         public ActionResult RenderNavigation()
         {
-            List<NavigationListItem> nav = GetNavigationModelFromDatabase();
+            List<NavigationListItem> nav = GetObjectFromCache<List<NavigationListItem>>("mainNav", 5, GetNavigationModelFromDatabase);
             return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Header.cshtml", nav);
         }
         public ActionResult RenderFooter()
@@ -34,9 +39,14 @@ namespace PJDu8.Controllers
         }
         private List<NavigationListItem> GetNavigationModelFromDatabase()
         {
-            const int HOME_PAGE_POSITION_IN_PATH = 1;
-            int homePageId = int.Parse(CurrentPage.Path.Split(',')[HOME_PAGE_POSITION_IN_PATH]);
-            IPublishedContent homePage = Umbraco.Content(homePageId);
+            //const int HOME_PAGE_POSITION_IN_PATH = 1;
+            //int homePageId = int.Parse(CurrentPage.Path.Split(',')[HOME_PAGE_POSITION_IN_PATH]);
+            //IPublishedContent homePage = Umbraco.Content(homePageId);
+
+            var homePage = CurrentPage.AncestorOrSelf(1)
+                                         .DescendantOrSelf()
+                                         .AsEnumerableOfOne()
+                                         .FirstOrDefault(x => x.IsDocumentType("home"));
             List<NavigationListItem> nav = new List<NavigationListItem>();
             nav.Add(new NavigationListItem(new NavigationLink(homePage.Url, homePage.Name)));
             nav.AddRange(GetChildNavigationList(homePage));
@@ -63,6 +73,27 @@ namespace PJDu8.Controllers
                 }
             }
             return listItems;
+        }
+        /// <summary>
+        /// A generic function for getting and setting objects to the memory cache.
+        /// </summary>
+        /// <typeparam name="T">The type of the object to be returned.</typeparam>
+        /// <param name="cacheItemName">The name to be used when storing this object in the cache.</param>
+        /// <param name="cacheTimeInMinutes">How long to cache this object for.</param>
+        /// <param name="objectSettingFunction">A parameterless function to call if the object isn't in the cache and you need to set it.</param>
+        /// <returns>An object of the type you asked for</returns>
+        private static T GetObjectFromCache<T>(string cacheItemName, int cacheTimeInMinutes, Func<T> objectSettingFunction)
+        {
+            ObjectCache cache = MemoryCache.Default;
+            var cachedObject = (T)cache[cacheItemName];
+            if (cachedObject == null)
+            {
+                CacheItemPolicy policy = new CacheItemPolicy();
+                policy.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(cacheTimeInMinutes);
+                cachedObject = objectSettingFunction();
+                cache.Set(cacheItemName, cachedObject, policy);
+            }
+            return cachedObject;
         }
     }
 }
