@@ -1,9 +1,10 @@
 ﻿<!-- Main -->
+@inherits UmbracoViewPage
 <section id="main" class="inner">
     <div class="content">
         <header class="major special">
-            <h2>Test</h2>
-            <p>Test</p>
+            <h2>@Umbraco.AssignedContentItem.Value("bodyTextTitle")</h2>
+            <p>@Umbraco.AssignedContentItem.Value("mainBodyText")</p>
         </header>
     </div>
 </section>

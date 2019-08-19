@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5ac4793276c8fffc")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "9f0fadd40a88a010")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.10")]
 
 
 // FILE: models.generated.cs
@@ -113,11 +113,18 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// bodyText
+		/// Main Body Text Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("bodyText")]
-		public IHtmlString BodyText => this.Value<IHtmlString>("bodyText");
+		[ImplementPropertyType("bodyTextTitle")]
+		public string BodyTextTitle => this.Value<string>("bodyTextTitle");
+
+		///<summary>
+		/// Main Body Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("mainBodyText")]
+		public IHtmlString MainBodyText => this.Value<IHtmlString>("mainBodyText");
 
 		///<summary>
 		/// CTA Body
@@ -132,6 +139,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAHeader")]
 		public string CTaheader => Intro.GetCTaheader(this);
+
+		///<summary>
+		/// CTA Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAImage")]
+		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 	}
 
 	/// <summary>Projects</summary>
@@ -172,6 +186,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAHeader")]
 		public string CTaheader => Intro.GetCTaheader(this);
+
+		///<summary>
+		/// CTA Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAImage")]
+		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 	}
 
 	// Mixin Content Type with alias "intro"
@@ -185,6 +206,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>CTA Header</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string CTaheader { get; }
+
+		/// <summary>CTA Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		IPublishedContent CTaimage { get; }
 	}
 
 	/// <summary>CTA</summary>
@@ -233,6 +258,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for CTA Header</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetCTaheader(IIntro that) => that.Value<string>("cTAHeader");
+
+		///<summary>
+		/// CTA Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAImage")]
+		public IPublishedContent CTaimage => GetCTaimage(this);
+
+		/// <summary>Static getter for CTA Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedContent GetCTaimage(IIntro that) => that.Value<IPublishedContent>("cTAImage");
 	}
 
 	/// <summary>Folder</summary>

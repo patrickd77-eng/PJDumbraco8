@@ -1,6 +1,10 @@
-﻿<section id="cta" class="wrapper">
+﻿@inherits  UmbracoViewPage
+@{
+    var ctaBackgroundImage = Umbraco.AssignedContentItem.Value<IPublishedContent>("cTAImage").Url;
+}
+<section style="background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(@ctaBackgroundImage)" id="cta" class="wrapper">
     <div class="inner">
-        <h2>Test</h2>
-        <p>Test</p>
+        <h2>@Umbraco.AssignedContentItem.Value("cTAHeader")</h2>
+        @Umbraco.AssignedContentItem.Value("cTABody")
     </div>
 </section>
