@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "9f0fadd40a88a010")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.10")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "7ec8b4af971ff90f")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 
 // FILE: models.generated.cs
@@ -42,7 +42,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>HomePage</summary>
 	[PublishedModel("homePage")]
-	public partial class HomePage : PublishedContentModel
+	public partial class HomePage : PublishedContentModel, IIntro
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -85,6 +85,27 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("homepageBannerTitle")]
 		public string HomepageBannerTitle => this.Value<string>("homepageBannerTitle");
+
+		///<summary>
+		/// CTA Body
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTABody")]
+		public IHtmlString CTabody => Intro.GetCTabody(this);
+
+		///<summary>
+		/// CTA Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAHeader")]
+		public string CTaheader => Intro.GetCTaheader(this);
+
+		///<summary>
+		/// CTA Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAImage")]
+		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 	}
 
 	/// <summary>Simple Content Page</summary>
