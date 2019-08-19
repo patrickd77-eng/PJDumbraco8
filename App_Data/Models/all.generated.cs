@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5e914850b21b791f")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5525b6a5a83cb777")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.8")]
 
 
 // FILE: models.generated.cs
@@ -42,7 +42,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>HomePage</summary>
 	[PublishedModel("homePage")]
-	public partial class HomePage : PublishedContentModel, IIntro
+	public partial class HomePage : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -66,37 +66,72 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// banner title
+		/// Footer Text: Copyright notice for the footer
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("bannerTitle")]
-		public string BannerTitle => Intro.GetBannerTitle(this);
+		[ImplementPropertyType("footerText")]
+		public string FooterText => this.Value<string>("footerText");
+
+		///<summary>
+		/// Page Banner Sub Title: The body content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageSubTitle")]
+		public IHtmlString PageSubTitle => this.Value<IHtmlString>("pageSubTitle");
+
+		///<summary>
+		/// Page Banner Title: The page's title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageTitle")]
+		public string PageTitle => this.Value<string>("pageTitle");
 	}
 
-	/// <summary>Content Page</summary>
-	[PublishedModel("ContentPage")]
-	public partial class ContentPage : PublishedContentModel
+	/// <summary>Simple Content Page</summary>
+	[PublishedModel("simpleContentPage")]
+	public partial class SimpleContentPage : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "ContentPage";
+		public new const string ModelTypeAlias = "simpleContentPage";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContentPage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SimpleContentPage, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public ContentPage(IPublishedContent content)
+		public SimpleContentPage(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
+
+		///<summary>
+		/// bodyText
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("bodyText")]
+		public IHtmlString BodyText => this.Value<IHtmlString>("bodyText");
+
+		///<summary>
+		/// pageSubTitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageSubTitle")]
+		public string PageSubTitle => this.Value<string>("pageSubTitle");
+
+		///<summary>
+		/// pageTitle: Title for page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageTitle")]
+		public string PageTitle => this.Value<string>("pageTitle");
 	}
 
 	/// <summary>Projects</summary>
@@ -125,18 +160,9 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 	}
 
-	// Mixin Content Type with alias "intro"
-	/// <summary>Intro</summary>
-	public partial interface IIntro : IPublishedContent
-	{
-		/// <summary>banner title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		string BannerTitle { get; }
-	}
-
 	/// <summary>Intro</summary>
 	[PublishedModel("intro")]
-	public partial class Intro : PublishedContentModel, IIntro
+	public partial class Intro : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -164,11 +190,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("bannerTitle")]
-		public string BannerTitle => GetBannerTitle(this);
-
-		/// <summary>Static getter for banner title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static string GetBannerTitle(IIntro that) => that.Value<string>("bannerTitle");
+		public string BannerTitle => this.Value<string>("bannerTitle");
 	}
 
 	/// <summary>Folder</summary>
