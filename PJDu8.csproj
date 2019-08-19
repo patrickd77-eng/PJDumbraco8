@@ -459,13 +459,10 @@
     <Content Include="favicon-96x96.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="images\banner.jpg" />
-    <Content Include="images\banner.mp4" />
-    <Content Include="images\bg.jpg" />
-    <Content Include="images\cta01.jpg" />
-    <Content Include="images\pic01.jpg" />
-    <Content Include="images\pic02.jpg" />
-    <Content Include="images\pic03.jpg" />
+    <Content Include="Media\fpugm024\mountains_tops_snow_sky_118564_1920x1080.jpg" />
+    <Content Include="Media\hn3lyozz\bg.jpg" />
+    <Content Include="Media\jx5fsmo0\cta01.jpg" />
+    <Content Include="Media\ts3l2t4h\bannercode.jpg" />
     <Content Include="ms-icon-144x144.png" />
     <Content Include="ms-icon-150x150.png" />
     <Content Include="ms-icon-310x310.png" />

@@ -1,7 +1,11 @@
-﻿<section id="banner">
+﻿@inherits UmbracoViewPage
+@{
+    var backgroundImage = Umbraco.AssignedContentItem.Value<IPublishedContent>("bannerBackgroundImage").Url;
+}
+<section id="banner">
     <div class="inner">
-        <h1>PATRICK J DAVIS</h1>
-        <p>Junior Web Developer | PC Builder | Undergraduate</p>
+        <h1>@Umbraco.AssignedContentItem.Value("homepageBannerTitle")</h1>
+        <p>@Umbraco.AssignedContentItem.Value("homepageBannerSubTitle")</p>
     </div>
-    <img src="/images/bannerCode.jpg" />
+    <img src="@backgroundImage" />
 </section>
