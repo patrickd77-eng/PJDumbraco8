@@ -543,11 +543,8 @@
     <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
-    <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />
-    <Content Include="Views\ContentPage.cshtml" />
     <Content Include="site.webmanifest" />
-    <Content Include="Views\PortfolioPage.cshtml" />
     <Content Include="Views\Partials\SiteLayout\_Header.cshtml" />
     <Content Include="Views\Partials\SiteLayout\_Footer.cshtml" />
     <Content Include="Views\Partials\Home\_Banner.cshtml" />
@@ -556,6 +553,9 @@
     <Content Include="Views\Partials\Portfolio\_Testimonials.cshtml" />
     <Content Include="Views\Partials\Content\_MainBody.cshtml" />
     <Content Include="Views\Partials\SiteLayout\_Head.cshtml" />
+    <Content Include="Views\HomePage.cshtml" />
+    <Content Include="Views\projects.cshtml" />
+    <Content Include="Views\SimpleContentPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
