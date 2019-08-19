@@ -433,6 +433,9 @@
     <Content Include="assets\js\jquery.min.js" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\js\util.js" />
+    <Content Include="bin\uSync8.BackOffice.dll" />
+    <Content Include="bin\uSync8.ContentEdition.dll" />
+    <Content Include="bin\uSync8.Core.dll" />
     <Content Include="browserconfig.xml" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
