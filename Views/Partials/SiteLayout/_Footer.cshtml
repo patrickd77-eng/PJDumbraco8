@@ -1,11 +1,13 @@
-﻿<footer id="footer">
+﻿@inherits  UmbracoViewPage
+    
+<footer id="footer">
     <div class="inner">
         <div class="content">
             <section>
                 <h4 style="text-align:center">Copyright</h4>
                 <div class="copyright">
-                    <p>Copyright | Patrick Jonathan Davis | © | 2019</p>
-                    <p style="font-size:7px;">Bootstrap template by <a target="_blank" href="http://www.templated.co">www.templated.co</a></p>
+                    @Umbraco.AssignedContentItem.Value("footerCopyrightText", fallback: Fallback.ToAncestors)
+                 <p style="font-size:7px;">Bootstrap template by <a target="_blank" href="http://www.templated.co">www.templated.co</a></p>
                 </div>
             </section>
             <section>
@@ -17,6 +19,5 @@
                 </ul>
             </section>
         </div>
-
     </div>
 </footer>

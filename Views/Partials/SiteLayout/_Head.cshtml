@@ -1,8 +1,15 @@
-﻿<title>PJD | Junior Web Developer | Bournemouth</title>
+﻿@inherits UmbracoViewPage
+
+<title>@Umbraco.AssignedContentItem.Value("pageTabName", defaultValue: "PJD | Developer")</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<meta name="description" content="Portfolio website for junior developer Patrick Davis who is based in Bournemouth. Built in Umbraco." />
-<meta name="keywords" content="developer,repair,computer,tech,junior,bournemouth,patrick,davis" />
+<meta name="description" content="@Umbraco.AssignedContentItem.Value("siteDescription", fallback: Fallback.ToAncestors)" />
+<meta name="keywords" content="@Umbraco.AssignedContentItem.Value("siteKeywords", fallback: Fallback.ToAncestors)" />
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="31 days">
+<meta name="author" content="PATRICK JONATHAN DAVIS">
 <link rel="stylesheet" href="/assets/css/main.css" />
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
