@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="description" content="@Umbraco.AssignedContentItem.Value("siteDescription", fallback: Fallback.ToAncestors)" />
 <meta name="keywords" content="@Umbraco.AssignedContentItem.Value("siteKeywords", fallback: Fallback.ToAncestors)" />
-<meta name="robots" content="@Umbraco.AssignedContentItem.Value("canIndex")">
+<meta name="robots" content="@Umbraco.AssignedContentItem.Value("canIndex", defaultValue: ("canIndex"))">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
 <meta name="revisit-after" content="@Umbraco.AssignedContentItem.Value("siteCrawlFrequency", fallback: Fallback.ToAncestors)">
+<meta name="copyright" content="@Umbraco.AssignedContentItem.Value("copyrightOwner", fallback: Fallback.ToAncestors)"/>
 <meta name="author" content="@Umbraco.AssignedContentItem.Value("siteAuthorTag", fallback: Fallback.ToAncestors)">
 <link rel="stylesheet" href="/assets/css/main.css" />
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">

@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "96679c2dd1417cd0")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "167e40e8e69053fe")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -71,63 +71,77 @@ namespace Umbraco.Web.PublishedModels
 		public string HomepageBannerTitle => this.Value<string>("homepageBannerTitle");
 
 		///<summary>
-		/// Footer Copyright Text
+		/// Footer Copyright Text: The copyright text in footer.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerCopyrightText")]
 		public string FooterCopyrightText => FooterControls.GetFooterCopyrightText(this);
 
 		///<summary>
-		/// Site Author Tag
+		/// Page Styling Credit: The credit tag for page's front end. I do not recommend changing this as it is a breach of copyright law against www.templated.co
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageStylingCredit")]
+		public string PageStylingCredit => FooterControls.GetPageStylingCredit(this);
+
+		///<summary>
+		/// Copyright Owner: Site's Copyright Tag
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("copyrightOwner")]
+		public string CopyrightOwner => GlobalMetaControls.GetCopyrightOwner(this);
+
+		///<summary>
+		/// Site Author Tag: A global single author tag.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteAuthorTag")]
 		public string SiteAuthorTag => GlobalMetaControls.GetSiteAuthorTag(this);
 
 		///<summary>
-		/// Site Crawl Frequency
+		/// Site Crawl Frequency: How often search engines revisit site. Format must be "X days" i.e. 31 days
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteCrawlFrequency")]
 		public string SiteCrawlFrequency => GlobalMetaControls.GetSiteCrawlFrequency(this);
 
 		///<summary>
-		/// Site Description
+		/// Site Description: A general description of the entire site.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteDescription")]
 		public string SiteDescription => GlobalMetaControls.GetSiteDescription(this);
 
 		///<summary>
-		/// Site Keywords
+		/// Site Keywords: Keywords for search engines.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteKeywords")]
 		public string SiteKeywords => GlobalMetaControls.GetSiteKeywords(this);
 
 		///<summary>
-		/// CTA Body
+		/// CTA Body: CTA Normal text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTABody")]
 		public IHtmlString CTabody => Intro.GetCTabody(this);
 
 		///<summary>
-		/// CTA Header
+		/// CTA Header: Header for CTA.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAHeader")]
 		public string CTaheader => Intro.GetCTaheader(this);
 
 		///<summary>
-		/// CTA Image
+		/// CTA Image: Background scrolling image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAImage")]
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// Can Index
+		/// Can Index: Can this page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("canIndex")]
@@ -181,28 +195,28 @@ namespace Umbraco.Web.PublishedModels
 		public IHtmlString MainBodyText => this.Value<IHtmlString>("mainBodyText");
 
 		///<summary>
-		/// CTA Body
+		/// CTA Body: CTA Normal text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTABody")]
 		public IHtmlString CTabody => Intro.GetCTabody(this);
 
 		///<summary>
-		/// CTA Header
+		/// CTA Header: Header for CTA.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAHeader")]
 		public string CTaheader => Intro.GetCTaheader(this);
 
 		///<summary>
-		/// CTA Image
+		/// CTA Image: Background scrolling image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAImage")]
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// Can Index
+		/// Can Index: Can this page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("canIndex")]
@@ -242,28 +256,28 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// CTA Body
+		/// CTA Body: CTA Normal text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTABody")]
 		public IHtmlString CTabody => Intro.GetCTabody(this);
 
 		///<summary>
-		/// CTA Header
+		/// CTA Header: Header for CTA.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAHeader")]
 		public string CTaheader => Intro.GetCTaheader(this);
 
 		///<summary>
-		/// CTA Image
+		/// CTA Image: Background scrolling image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAImage")]
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// Can Index
+		/// Can Index: Can this page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("canIndex")]
@@ -320,7 +334,7 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// CTA Body
+		/// CTA Body: CTA Normal text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTABody")]
@@ -331,7 +345,7 @@ namespace Umbraco.Web.PublishedModels
 		public static IHtmlString GetCTabody(IIntro that) => that.Value<IHtmlString>("cTABody");
 
 		///<summary>
-		/// CTA Header
+		/// CTA Header: Header for CTA.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAHeader")]
@@ -342,7 +356,7 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetCTaheader(IIntro that) => that.Value<string>("cTAHeader");
 
 		///<summary>
-		/// CTA Image
+		/// CTA Image: Background scrolling image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("cTAImage")]
@@ -392,7 +406,7 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Can Index
+		/// Can Index: Can this page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("canIndex")]
@@ -421,6 +435,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Footer Copyright Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string FooterCopyrightText { get; }
+
+		/// <summary>Page Styling Credit</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string PageStylingCredit { get; }
 	}
 
 	/// <summary>Footer Controls</summary>
@@ -449,7 +467,7 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Footer Copyright Text
+		/// Footer Copyright Text: The copyright text in footer.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerCopyrightText")]
@@ -458,12 +476,27 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Footer Copyright Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetFooterCopyrightText(IFooterControls that) => that.Value<string>("footerCopyrightText");
+
+		///<summary>
+		/// Page Styling Credit: The credit tag for page's front end. I do not recommend changing this as it is a breach of copyright law against www.templated.co
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageStylingCredit")]
+		public string PageStylingCredit => GetPageStylingCredit(this);
+
+		/// <summary>Static getter for Page Styling Credit</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetPageStylingCredit(IFooterControls that) => that.Value<string>("pageStylingCredit");
 	}
 
 	// Mixin Content Type with alias "globalMetaControls"
 	/// <summary>Global Meta Controls</summary>
 	public partial interface IGlobalMetaControls : IPublishedContent
 	{
+		/// <summary>Copyright Owner</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string CopyrightOwner { get; }
+
 		/// <summary>Site Author Tag</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string SiteAuthorTag { get; }
@@ -507,7 +540,18 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Site Author Tag
+		/// Copyright Owner: Site's Copyright Tag
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("copyrightOwner")]
+		public string CopyrightOwner => GetCopyrightOwner(this);
+
+		/// <summary>Static getter for Copyright Owner</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetCopyrightOwner(IGlobalMetaControls that) => that.Value<string>("copyrightOwner");
+
+		///<summary>
+		/// Site Author Tag: A global single author tag.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteAuthorTag")]
@@ -518,7 +562,7 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetSiteAuthorTag(IGlobalMetaControls that) => that.Value<string>("siteAuthorTag");
 
 		///<summary>
-		/// Site Crawl Frequency
+		/// Site Crawl Frequency: How often search engines revisit site. Format must be "X days" i.e. 31 days
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteCrawlFrequency")]
@@ -529,7 +573,7 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetSiteCrawlFrequency(IGlobalMetaControls that) => that.Value<string>("siteCrawlFrequency");
 
 		///<summary>
-		/// Site Description
+		/// Site Description: A general description of the entire site.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteDescription")]
@@ -540,7 +584,7 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetSiteDescription(IGlobalMetaControls that) => that.Value<string>("siteDescription");
 
 		///<summary>
-		/// Site Keywords
+		/// Site Keywords: Keywords for search engines.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteKeywords")]

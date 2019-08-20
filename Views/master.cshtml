@@ -8,10 +8,10 @@
 <head>
     @{ Html.RenderAction("RenderHeadHtml", "SiteLayout");}
 </head>
+<!-- Body -->
 <body class="is-preload">
-    <!-- Header -->
+    <!-- Header and Nav -->
     @{ Html.RenderAction("RenderNavigation", "SiteLayout");}
-    <!-- Body -->
     @RenderBody()
     <!-- Footer -->
     @{ Html.RenderAction("RenderFooter", "SiteLayout");}

@@ -3297,7 +3297,7 @@ body.is-preload #banner:before {
     }
 
     #cta h1, #cta h2, #cta h3, #cta h4, #cta h5, #cta h6 {
-        color: #ffffff;
+        color: white;
     }
 
     #cta blockquote {
@@ -3794,7 +3794,7 @@ body {
     body:before {
         content: ' ';
         /*NOTE*/
-        background-image: url(../../images/bg.jpg);
+        background-image: url(../../Media/jvanyn14/shutterstock_251560003.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
