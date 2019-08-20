@@ -1,62 +1,37 @@
-﻿<section class="wrapper">
+﻿@inherits UmbracoViewPage
+       
+<section class="wrapper">
     <div class="inner">
         <header class="special">
-            <h2>Test</h2>
-            <p>Test</p>
+            <h2>@Umbraco.AssignedContentItem.Value("highlightsHeader")</h2>
+            <p>@Umbraco.AssignedContentItem.Value("highlightsSubText")</p>
         </header>
         <div class="highlights">
             <section>
                 <div class="content">
                     <header>
-                        <a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
-                        <h3>TEST</h3>
+                        <a href="#" class="icon @Umbraco.AssignedContentItem.Value("highlightsOneIcon")"><span class="label">Icon</span></a>
+                        <h3>@Umbraco.AssignedContentItem.Value("highlightsOneHeader")</h3>
                     </header>
-                    <p>TEST</p>
+                    <p>@Umbraco.AssignedContentItem.Value("highlightsOneText")</p>
                 </div>
             </section>
             <section>
                 <div class="content">
                     <header>
-                        <a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
-                        <h3>TEST</h3>
+                        <a href="#" class="icon @Umbraco.AssignedContentItem.Value("highlightsTwoIcon")"><span class="label">Icon</span></a>
+                        <h3>@Umbraco.AssignedContentItem.Value("highlightsTwoHeader")</h3>
                     </header>
-                    <p>TEST</p>
+                    <p>@Umbraco.AssignedContentItem.Value("highlightsTwoText")</p>
                 </div>
             </section>
             <section>
                 <div class="content">
                     <header>
-                        <a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
-                        <h3>TEST</h3>
+                        <a href="#" class="icon @Umbraco.AssignedContentItem.Value("highlightsThreeIcon")"><span class="label">Icon</span></a>
+                        <h3>@Umbraco.AssignedContentItem.Value("highlightsThreeHeader")</h3>
                     </header>
-                    <p>TEST</p>
-                </div>
-            </section>
-            <section>
-                <div class="content">
-                    <header>
-                        <a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
-                        <h3>TEST</h3>
-                    </header>
-                    <p>TEST</p>
-                </div>
-            </section>
-            <section>
-                <div class="content">
-                    <header>
-                        <a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-                        <h3>TEST</h3>
-                    </header>
-                    <p>TEST</p>
-                </div>
-            </section>
-            <section>
-                <div class="content">
-                    <header>
-                        <a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
-                        <h3>TEST</h3>
-                    </header>
-                    <p>TEST</p>
+                    <p>@Umbraco.AssignedContentItem.Value("highlightsThreeText")</p>
                 </div>
             </section>
         </div>

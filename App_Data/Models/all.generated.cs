@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "167e40e8e69053fe")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "be6185e6c28fe273")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.7")]
 
 
 // FILE: models.generated.cs
@@ -71,6 +71,83 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("bannerBackgroundImage")]
 		public IPublishedContent BannerBackgroundImage => this.Value<IPublishedContent>("bannerBackgroundImage");
+
+		///<summary>
+		/// Highlights Header: The header for the highlight section
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsHeader")]
+		public string HighlightsHeader => this.Value<string>("highlightsHeader");
+
+		///<summary>
+		/// Highlights One Header: Highlights one header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsOneHeader")]
+		public string HighlightsOneHeader => this.Value<string>("highlightsOneHeader");
+
+		///<summary>
+		/// Highlights One Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsOneIcon")]
+		public string HighlightsOneIcon => this.Value<string>("highlightsOneIcon");
+
+		///<summary>
+		/// Highlights One Text: Highlights One Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsOneText")]
+		public string HighlightsOneText => this.Value<string>("highlightsOneText");
+
+		///<summary>
+		/// Highlights Text: Highlights normal text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsSubText")]
+		public string HighlightsSubText => this.Value<string>("highlightsSubText");
+
+		///<summary>
+		/// Highlights Three Header: Highlights Three Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsThreeHeader")]
+		public string HighlightsThreeHeader => this.Value<string>("highlightsThreeHeader");
+
+		///<summary>
+		/// Highlights Three Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsThreeIcon")]
+		public string HighlightsThreeIcon => this.Value<string>("highlightsThreeIcon");
+
+		///<summary>
+		/// Highlights Three Text: Highlights Three Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsThreeText")]
+		public string HighlightsThreeText => this.Value<string>("highlightsThreeText");
+
+		///<summary>
+		/// Highlights Two Header: Highlights Two Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsTwoHeader")]
+		public string HighlightsTwoHeader => this.Value<string>("highlightsTwoHeader");
+
+		///<summary>
+		/// Highlights Two Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsTwoIcon")]
+		public string HighlightsTwoIcon => this.Value<string>("highlightsTwoIcon");
+
+		///<summary>
+		/// Highlights Two Text: Highlights two body text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("highlightsTwoText")]
+		public string HighlightsTwoText => this.Value<string>("highlightsTwoText");
 
 		///<summary>
 		/// Page Banner Sub Title: The body content

@@ -3794,7 +3794,7 @@ body {
     body:before {
         content: ' ';
         /*NOTE*/
-        background-image: url(../../Media/jvanyn14/shutterstock_251560003.jpg);
+        /*background-image: url(../../Media/jvanyn14/shutterstock_251560003.jpg);*/
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
