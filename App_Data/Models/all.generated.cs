@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f091ac602f94faa3")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "96679c2dd1417cd0")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -42,7 +42,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Home Page</summary>
 	[PublishedModel("homePage")]
-	public partial class HomePage : PublishedContentModel, IFooterControls, IIntro, IMetaControls
+	public partial class HomePage : PublishedContentModel, IFooterControls, IGlobalMetaControls, IIntro, IMetaControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -94,6 +94,34 @@ namespace Umbraco.Web.PublishedModels
 		public string FooterCopyrightText => FooterControls.GetFooterCopyrightText(this);
 
 		///<summary>
+		/// Site Author Tag
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("siteAuthorTag")]
+		public string SiteAuthorTag => GlobalMetaControls.GetSiteAuthorTag(this);
+
+		///<summary>
+		/// Site Crawl Frequency
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("siteCrawlFrequency")]
+		public string SiteCrawlFrequency => GlobalMetaControls.GetSiteCrawlFrequency(this);
+
+		///<summary>
+		/// Site Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("siteDescription")]
+		public string SiteDescription => GlobalMetaControls.GetSiteDescription(this);
+
+		///<summary>
+		/// Site Keywords
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("siteKeywords")]
+		public string SiteKeywords => GlobalMetaControls.GetSiteKeywords(this);
+
+		///<summary>
 		/// CTA Body
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -115,25 +143,18 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// This Page's Name: A "Site Title" for this page only.
+		/// Can Index
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("canIndex")]
+		public string CanIndex => MetaControls.GetCanIndex(this);
+
+		///<summary>
+		/// This Page's Name: A "Site Title" for this page only, appearing on the tab text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
 		public string PageTabName => MetaControls.GetPageTabName(this);
-
-		///<summary>
-		/// Site Description: Global site description.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteDescription")]
-		public string SiteDescription => MetaControls.GetSiteDescription(this);
-
-		///<summary>
-		/// Site Keywords: Global site keywords.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteKeywords")]
-		public string SiteKeywords => MetaControls.GetSiteKeywords(this);
 	}
 
 	/// <summary>General Content Page</summary>
@@ -197,25 +218,18 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// This Page's Name: A "Site Title" for this page only.
+		/// Can Index
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("canIndex")]
+		public string CanIndex => MetaControls.GetCanIndex(this);
+
+		///<summary>
+		/// This Page's Name: A "Site Title" for this page only, appearing on the tab text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
 		public string PageTabName => MetaControls.GetPageTabName(this);
-
-		///<summary>
-		/// Site Description: Global site description.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteDescription")]
-		public string SiteDescription => MetaControls.GetSiteDescription(this);
-
-		///<summary>
-		/// Site Keywords: Global site keywords.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteKeywords")]
-		public string SiteKeywords => MetaControls.GetSiteKeywords(this);
 	}
 
 	/// <summary>Portfolio Page</summary>
@@ -265,25 +279,18 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// This Page's Name: A "Site Title" for this page only.
+		/// Can Index
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("canIndex")]
+		public string CanIndex => MetaControls.GetCanIndex(this);
+
+		///<summary>
+		/// This Page's Name: A "Site Title" for this page only, appearing on the tab text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
 		public string PageTabName => MetaControls.GetPageTabName(this);
-
-		///<summary>
-		/// Site Description: Global site description.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteDescription")]
-		public string SiteDescription => MetaControls.GetSiteDescription(this);
-
-		///<summary>
-		/// Site Keywords: Global site keywords.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteKeywords")]
-		public string SiteKeywords => MetaControls.GetSiteKeywords(this);
 	}
 
 	// Mixin Content Type with alias "intro"
@@ -363,23 +370,19 @@ namespace Umbraco.Web.PublishedModels
 	}
 
 	// Mixin Content Type with alias "metaControls"
-	/// <summary>Meta Controls</summary>
+	/// <summary>Local Meta Controls</summary>
 	public partial interface IMetaControls : IPublishedContent
 	{
+		/// <summary>Can Index</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string CanIndex { get; }
+
 		/// <summary>This Page's Name</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string PageTabName { get; }
-
-		/// <summary>Site Description</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		string SiteDescription { get; }
-
-		/// <summary>Site Keywords</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		string SiteKeywords { get; }
 	}
 
-	/// <summary>Meta Controls</summary>
+	/// <summary>Local Meta Controls</summary>
 	[PublishedModel("metaControls")]
 	public partial class MetaControls : PublishedContentModel, IMetaControls
 	{
@@ -405,7 +408,18 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// This Page's Name: A "Site Title" for this page only.
+		/// Can Index
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("canIndex")]
+		public string CanIndex => GetCanIndex(this);
+
+		/// <summary>Static getter for Can Index</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetCanIndex(IMetaControls that) => that.Value<string>("canIndex");
+
+		///<summary>
+		/// This Page's Name: A "Site Title" for this page only, appearing on the tab text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
@@ -414,28 +428,6 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for This Page's Name</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetPageTabName(IMetaControls that) => that.Value<string>("pageTabName");
-
-		///<summary>
-		/// Site Description: Global site description.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteDescription")]
-		public string SiteDescription => GetSiteDescription(this);
-
-		/// <summary>Static getter for Site Description</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static string GetSiteDescription(IMetaControls that) => that.Value<string>("siteDescription");
-
-		///<summary>
-		/// Site Keywords: Global site keywords.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteKeywords")]
-		public string SiteKeywords => GetSiteKeywords(this);
-
-		/// <summary>Static getter for Site Keywords</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static string GetSiteKeywords(IMetaControls that) => that.Value<string>("siteKeywords");
 	}
 
 	// Mixin Content Type with alias "footerControls"
@@ -482,6 +474,97 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Footer Copyright Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetFooterCopyrightText(IFooterControls that) => that.Value<string>("footerCopyrightText");
+	}
+
+	// Mixin Content Type with alias "globalMetaControls"
+	/// <summary>Global Meta Controls</summary>
+	public partial interface IGlobalMetaControls : IPublishedContent
+	{
+		/// <summary>Site Author Tag</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string SiteAuthorTag { get; }
+
+		/// <summary>Site Crawl Frequency</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string SiteCrawlFrequency { get; }
+
+		/// <summary>Site Description</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string SiteDescription { get; }
+
+		/// <summary>Site Keywords</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string SiteKeywords { get; }
+	}
+
+	/// <summary>Global Meta Controls</summary>
+	[PublishedModel("globalMetaControls")]
+	public partial class GlobalMetaControls : PublishedContentModel, IGlobalMetaControls
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const string ModelTypeAlias = "globalMetaControls";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<GlobalMetaControls, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public GlobalMetaControls(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Site Author Tag
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("siteAuthorTag")]
+		public string SiteAuthorTag => GetSiteAuthorTag(this);
+
+		/// <summary>Static getter for Site Author Tag</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetSiteAuthorTag(IGlobalMetaControls that) => that.Value<string>("siteAuthorTag");
+
+		///<summary>
+		/// Site Crawl Frequency
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("siteCrawlFrequency")]
+		public string SiteCrawlFrequency => GetSiteCrawlFrequency(this);
+
+		/// <summary>Static getter for Site Crawl Frequency</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetSiteCrawlFrequency(IGlobalMetaControls that) => that.Value<string>("siteCrawlFrequency");
+
+		///<summary>
+		/// Site Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("siteDescription")]
+		public string SiteDescription => GetSiteDescription(this);
+
+		/// <summary>Static getter for Site Description</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetSiteDescription(IGlobalMetaControls that) => that.Value<string>("siteDescription");
+
+		///<summary>
+		/// Site Keywords
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("siteKeywords")]
+		public string SiteKeywords => GetSiteKeywords(this);
+
+		/// <summary>Static getter for Site Keywords</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetSiteKeywords(IGlobalMetaControls that) => that.Value<string>("siteKeywords");
 	}
 
 	/// <summary>Folder</summary>
