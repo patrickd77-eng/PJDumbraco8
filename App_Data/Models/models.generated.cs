@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "64a8b9d5f8ce6898")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.21")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f091ac602f94faa3")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -99,21 +99,21 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// Page Name
+		/// This Page's Name: A "Site Title" for this page only.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
 		public string PageTabName => MetaControls.GetPageTabName(this);
 
 		///<summary>
-		/// Site Description
+		/// Site Description: Global site description.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteDescription")]
 		public string SiteDescription => MetaControls.GetSiteDescription(this);
 
 		///<summary>
-		/// Site Keywords
+		/// Site Keywords: Global site keywords.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteKeywords")]
@@ -181,21 +181,21 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// Page Name
+		/// This Page's Name: A "Site Title" for this page only.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
 		public string PageTabName => MetaControls.GetPageTabName(this);
 
 		///<summary>
-		/// Site Description
+		/// Site Description: Global site description.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteDescription")]
 		public string SiteDescription => MetaControls.GetSiteDescription(this);
 
 		///<summary>
-		/// Site Keywords
+		/// Site Keywords: Global site keywords.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteKeywords")]
@@ -249,21 +249,21 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// Page Name
+		/// This Page's Name: A "Site Title" for this page only.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
 		public string PageTabName => MetaControls.GetPageTabName(this);
 
 		///<summary>
-		/// Site Description
+		/// Site Description: Global site description.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteDescription")]
 		public string SiteDescription => MetaControls.GetSiteDescription(this);
 
 		///<summary>
-		/// Site Keywords
+		/// Site Keywords: Global site keywords.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteKeywords")]
@@ -350,7 +350,7 @@ namespace Umbraco.Web.PublishedModels
 	/// <summary>Meta Controls</summary>
 	public partial interface IMetaControls : IPublishedContent
 	{
-		/// <summary>Page Name</summary>
+		/// <summary>This Page's Name</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string PageTabName { get; }
 
@@ -389,18 +389,18 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Page Name
+		/// This Page's Name: A "Site Title" for this page only.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
 		public string PageTabName => GetPageTabName(this);
 
-		/// <summary>Static getter for Page Name</summary>
+		/// <summary>Static getter for This Page's Name</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetPageTabName(IMetaControls that) => that.Value<string>("pageTabName");
 
 		///<summary>
-		/// Site Description
+		/// Site Description: Global site description.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteDescription")]
@@ -411,7 +411,7 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetSiteDescription(IMetaControls that) => that.Value<string>("siteDescription");
 
 		///<summary>
-		/// Site Keywords
+		/// Site Keywords: Global site keywords.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteKeywords")]
