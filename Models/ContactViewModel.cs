@@ -14,6 +14,6 @@ namespace PJDu8.Models
 
         [Required]
         [MaxLength(500, ErrorMessage = "There is a 500 character limit.")]
-        public string Message { get; set; } 
+        public string Message { get; set; }
     }
 }

@@ -1,22 +1,30 @@
 ﻿@inherits  UmbracoViewPage
-    
+
 <footer id="footer">
     <div class="inner">
         <div class="content">
             <section>
                 <h4 style="text-align:center">Copyright</h4>
                 <div class="copyright">
-                    @Umbraco.AssignedContentItem.Value("footerCopyrightText", fallback: Fallback.ToAncestors)
-                 <p style="font-size:7px;">@Umbraco.AssignedContentItem.Value("pageStylingCredit",fallback: Fallback.ToAncestors)</p>
+                    <div style="font-size:16px;">@Umbraco.AssignedContentItem.Value("footerCopyrightText", fallback: Fallback.ToAncestors)</div>
+                    <p style="font-size:9px;">@Umbraco.AssignedContentItem.Value("pageStylingCredit", fallback: Fallback.ToAncestors)</p>
                 </div>
             </section>
             <section>
-                <h4>Networks</h4>
+                <h4 style="text-align:center">Networks</h4>
+                <hr />
                 <ul class="plain">
-                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link1URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link1Icon",fallback: Fallback.ToAncestors)"></i>@Umbraco.AssignedContentItem.Value("link1Text",fallback: Fallback.ToAncestors)</a></li>
-                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link2URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link2Icon",fallback: Fallback.ToAncestors)"></i>@Umbraco.AssignedContentItem.Value("link2Text",fallback: Fallback.ToAncestors)</a></li>
-                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link3URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link3Icon",fallback: Fallback.ToAncestors)"></i>@Umbraco.AssignedContentItem.Value("link3Text",fallback: Fallback.ToAncestors)</a></li>
+                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link1URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link1Icon",fallback: Fallback.ToAncestors)"></i>@Umbraco.AssignedContentItem.Value("link1Text", fallback: Fallback.ToAncestors)</a></li>
+                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link2URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link2Icon",fallback: Fallback.ToAncestors)"></i>@Umbraco.AssignedContentItem.Value("link2Text", fallback: Fallback.ToAncestors)</a></li>
+                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link3URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link3Icon",fallback: Fallback.ToAncestors)"></i>@Umbraco.AssignedContentItem.Value("link3Text", fallback: Fallback.ToAncestors)</a></li>
                 </ul>
+            </section>
+            <section>
+                <h4 style="text-align:center">@Umbraco.AssignedContentItem.Value("contactHeader", fallback: Fallback.ToAncestors)</h4>
+                <hr />
+                <div id="contact-form-container">
+                    @{ Html.RenderAction("RenderForm", "Contact"); }
+                </div>
             </section>
         </div>
     </div>

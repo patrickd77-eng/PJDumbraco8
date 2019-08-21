@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4b5500807989c676")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5ce894c6015c1842")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -162,6 +162,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("homepageBannerTitle")]
 		public string HomepageBannerTitle => this.Value<string>("homepageBannerTitle");
+
+		///<summary>
+		/// Contact Header: Header for contact area
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("contactHeader")]
+		public string ContactHeader => FooterControls.GetContactHeader(this);
 
 		///<summary>
 		/// Footer Copyright Text: The copyright text in footer.
@@ -588,6 +595,10 @@ namespace Umbraco.Web.PublishedModels
 	/// <summary>Footer Controls</summary>
 	public partial interface IFooterControls : IPublishedContent
 	{
+		/// <summary>Contact Header</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string ContactHeader { get; }
+
 		/// <summary>Footer Copyright Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string FooterCopyrightText { get; }
@@ -657,6 +668,17 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Contact Header: Header for contact area
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("contactHeader")]
+		public string ContactHeader => GetContactHeader(this);
+
+		/// <summary>Static getter for Contact Header</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetContactHeader(IFooterControls that) => that.Value<string>("contactHeader");
 
 		///<summary>
 		/// Footer Copyright Text: The copyright text in footer.
