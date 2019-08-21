@@ -1,0 +1,31 @@
+﻿@inherits UmbracoViewPage<ContactViewModel>
+    @using PJDu8.Models
+
+    <div id="form-outer">
+        @using (Ajax.BeginForm("SubmitForm", "Contact", new AjaxOptions()
+        {
+            UpdateTargetId = "form-result",
+            HttpMethod = "POST",
+            InsertionMode = InsertionMode.Replace,
+            OnSuccess = "contactForm.ShowResult",
+            OnFailure = "contactForm.ShowResult"
+        }, new { id = "contact-form" }))
+        {
+             <form action="#" method="post">
+                    <div>
+                        @Html.TextBoxFor(m => m.Name, new { placeholder = "Name" })
+                    </div>
+                    <div>
+                        @Html.TextBoxFor(m => m.Email, new { placeholder = "Email" })
+                    </div>
+                    <div>
+                        @Html.TextAreaFor(m => m.Message, new { placeholder = "Message", rows = "4" })
+                    </div>
+                    <ul>
+                        <li><input type="submit" name="Submit" value="Submit" /></li>
+                    </ul>
+                </form>
+
+        }
+    </div>
+    <div id="form-result"></div>

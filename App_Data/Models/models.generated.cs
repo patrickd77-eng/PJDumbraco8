@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "be6185e6c28fe273")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.7")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4b5500807989c676")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -141,7 +141,7 @@ namespace Umbraco.Web.PublishedModels
 		public IHtmlString HomepageBannerSubTitle => this.Value<IHtmlString>("homepageBannerSubTitle");
 
 		///<summary>
-		/// Page Banner Title: The page's title
+		/// Homepage Banner Title: The overall banner title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("homepageBannerTitle")]
@@ -155,7 +155,70 @@ namespace Umbraco.Web.PublishedModels
 		public string FooterCopyrightText => FooterControls.GetFooterCopyrightText(this);
 
 		///<summary>
-		/// Page Styling Credit: The credit tag for page's front end. I do not recommend changing this as it is a breach of copyright law against www.templated.co
+		/// Link 1 Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link1Icon")]
+		public string Link1Icon => FooterControls.GetLink1Icon(this);
+
+		///<summary>
+		/// Link 1 Text: How link reads
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link1Text")]
+		public string Link1Text => FooterControls.GetLink1Text(this);
+
+		///<summary>
+		/// Link 1 URL: URL for link 1
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link1URL")]
+		public string Link1Url => FooterControls.GetLink1Url(this);
+
+		///<summary>
+		/// Link 2 Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link2Icon")]
+		public string Link2Icon => FooterControls.GetLink2Icon(this);
+
+		///<summary>
+		/// Link 2 Text: How link looks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link2Text")]
+		public string Link2Text => FooterControls.GetLink2Text(this);
+
+		///<summary>
+		/// Link 2 URL: URL for link 2
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link2URL")]
+		public string Link2Url => FooterControls.GetLink2Url(this);
+
+		///<summary>
+		/// Link 3 Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link3Icon")]
+		public string Link3Icon => FooterControls.GetLink3Icon(this);
+
+		///<summary>
+		/// Link 3 Text: How link looks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link3Text")]
+		public string Link3Text => FooterControls.GetLink3Text(this);
+
+		///<summary>
+		/// Link 3 URL: URL for link 3
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link3URL")]
+		public string Link3Url => FooterControls.GetLink3Url(this);
+
+		///<summary>
+		/// Page Styling Credit: The credit tag for page's front end design (templated.co)
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageStylingCredit")]
@@ -513,6 +576,42 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string FooterCopyrightText { get; }
 
+		/// <summary>Link 1 Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link1Icon { get; }
+
+		/// <summary>Link 1 Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link1Text { get; }
+
+		/// <summary>Link 1 URL</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link1Url { get; }
+
+		/// <summary>Link 2 Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link2Icon { get; }
+
+		/// <summary>Link 2 Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link2Text { get; }
+
+		/// <summary>Link 2 URL</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link2Url { get; }
+
+		/// <summary>Link 3 Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link3Icon { get; }
+
+		/// <summary>Link 3 Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link3Text { get; }
+
+		/// <summary>Link 3 URL</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string Link3Url { get; }
+
 		/// <summary>Page Styling Credit</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string PageStylingCredit { get; }
@@ -555,7 +654,106 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetFooterCopyrightText(IFooterControls that) => that.Value<string>("footerCopyrightText");
 
 		///<summary>
-		/// Page Styling Credit: The credit tag for page's front end. I do not recommend changing this as it is a breach of copyright law against www.templated.co
+		/// Link 1 Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link1Icon")]
+		public string Link1Icon => GetLink1Icon(this);
+
+		/// <summary>Static getter for Link 1 Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink1Icon(IFooterControls that) => that.Value<string>("link1Icon");
+
+		///<summary>
+		/// Link 1 Text: How link reads
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link1Text")]
+		public string Link1Text => GetLink1Text(this);
+
+		/// <summary>Static getter for Link 1 Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink1Text(IFooterControls that) => that.Value<string>("link1Text");
+
+		///<summary>
+		/// Link 1 URL: URL for link 1
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link1URL")]
+		public string Link1Url => GetLink1Url(this);
+
+		/// <summary>Static getter for Link 1 URL</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink1Url(IFooterControls that) => that.Value<string>("link1URL");
+
+		///<summary>
+		/// Link 2 Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link2Icon")]
+		public string Link2Icon => GetLink2Icon(this);
+
+		/// <summary>Static getter for Link 2 Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink2Icon(IFooterControls that) => that.Value<string>("link2Icon");
+
+		///<summary>
+		/// Link 2 Text: How link looks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link2Text")]
+		public string Link2Text => GetLink2Text(this);
+
+		/// <summary>Static getter for Link 2 Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink2Text(IFooterControls that) => that.Value<string>("link2Text");
+
+		///<summary>
+		/// Link 2 URL: URL for link 2
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link2URL")]
+		public string Link2Url => GetLink2Url(this);
+
+		/// <summary>Static getter for Link 2 URL</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink2Url(IFooterControls that) => that.Value<string>("link2URL");
+
+		///<summary>
+		/// Link 3 Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link3Icon")]
+		public string Link3Icon => GetLink3Icon(this);
+
+		/// <summary>Static getter for Link 3 Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink3Icon(IFooterControls that) => that.Value<string>("link3Icon");
+
+		///<summary>
+		/// Link 3 Text: How link looks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link3Text")]
+		public string Link3Text => GetLink3Text(this);
+
+		/// <summary>Static getter for Link 3 Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink3Text(IFooterControls that) => that.Value<string>("link3Text");
+
+		///<summary>
+		/// Link 3 URL: URL for link 3
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("link3URL")]
+		public string Link3Url => GetLink3Url(this);
+
+		/// <summary>Static getter for Link 3 URL</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetLink3Url(IFooterControls that) => that.Value<string>("link3URL");
+
+		///<summary>
+		/// Page Styling Credit: The credit tag for page's front end design (templated.co)
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageStylingCredit")]
