@@ -468,6 +468,16 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Media\2u4dldsi\shutterstock_606606557.jpg" />
+    <Content Include="Media\4xmhd424\shutterstock_1134885563-1.jpg" />
+    <Content Include="Media\hn3lyozz\bg.jpg" />
+    <Content Include="Media\jvanyn14\shutterstock_251560003.jpg" />
+    <Content Include="Media\jx5fsmo0\cta01.jpg" />
+    <Content Include="Media\rv4ds2em\20190728_164451.jpg" />
+    <Content Include="Media\ts3l2t4h\bannercode.jpg" />
+    <Content Include="Media\vzekuydu\20190728_162844.jpg" />
+    <Content Include="Media\Web.config" />
+    <Content Include="Media\xaafbgin\shutterstock_511444168.jpg" />
     <Content Include="ms-icon-144x144.png" />
     <Content Include="ms-icon-150x150.png" />
     <Content Include="ms-icon-310x310.png" />
@@ -507,7 +517,6 @@
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\cache.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
-    <Content Include="Media\Web.config" />
     <Content Include="config\umbracoSettings.config" />
     <Content Include="config\tinyMceConfig.config" />
     <Content Include="config\serilog.user.config" />
@@ -603,9 +612,6 @@
     <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Media\hn3lyozz\" />
-    <Folder Include="Media\jx5fsmo0\" />
-    <Folder Include="Media\ts3l2t4h\" />
     <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <PropertyGroup>

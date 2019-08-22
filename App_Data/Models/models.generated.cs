@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5ce894c6015c1842")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "de2985dc69031676")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
@@ -71,7 +71,7 @@ namespace Umbraco.Web.PublishedModels
 		public string HighlightsOneHeader => this.Value<string>("highlightsOneHeader");
 
 		///<summary>
-		/// Highlights One Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		/// Highlights One Icon: fontawesome.com/v4.7.0/cheatsheet/
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsOneIcon")]
@@ -99,7 +99,7 @@ namespace Umbraco.Web.PublishedModels
 		public string HighlightsThreeHeader => this.Value<string>("highlightsThreeHeader");
 
 		///<summary>
-		/// Highlights Three Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		/// Highlights Three Icon: fontawesome.com/v4.7.0/cheatsheet/
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsThreeIcon")]
@@ -120,7 +120,7 @@ namespace Umbraco.Web.PublishedModels
 		public string HighlightsTwoHeader => this.Value<string>("highlightsTwoHeader");
 
 		///<summary>
-		/// Highlights Two Icon: https://fontawesome.com/v4.7.0/cheatsheet/
+		/// Highlights Two Icon: fontawesome.com/v4.7.0/cheatsheet/
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsTwoIcon")]
@@ -439,7 +439,7 @@ namespace Umbraco.Web.PublishedModels
 	}
 
 	// Mixin Content Type with alias "intro"
-	/// <summary>CTA</summary>
+	/// <summary>CTA Controls</summary>
 	public partial interface IIntro : IPublishedContent
 	{
 		/// <summary>CTA Body</summary>
@@ -455,7 +455,7 @@ namespace Umbraco.Web.PublishedModels
 		IPublishedContent CTaimage { get; }
 	}
 
-	/// <summary>CTA</summary>
+	/// <summary>CTA Controls</summary>
 	[PublishedModel("intro")]
 	public partial class Intro : PublishedContentModel, IIntro
 	{
@@ -890,6 +890,39 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Site Keywords</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetSiteKeywords(IGlobalMetaControls that) => that.Value<string>("siteKeywords");
+	}
+
+	/// <summary>Content Controls</summary>
+	[PublishedModel("contentControls")]
+	public partial class ContentControls : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const string ModelTypeAlias = "contentControls";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContentControls, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public ContentControls(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Content Grid Control: Enter page content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("contentGridControl")]
+		public Newtonsoft.Json.Linq.JToken ContentGridControl => this.Value<Newtonsoft.Json.Linq.JToken>("contentGridControl");
 	}
 
 	/// <summary>Folder</summary>

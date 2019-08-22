@@ -8,12 +8,12 @@ namespace PJDu8.Models
         [Required(ErrorMessage = "Please enter your name.")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Please enter your email address")]
+        [Required(ErrorMessage = "Please enter your email address.")]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
-        [MaxLength(500, ErrorMessage = "There is a 500 character limit.")]
+        [MaxLength(1000, ErrorMessage = "There is a 1000 character limit. Try to reduce your message!")]
         public string Message { get; set; }
     }
 }
