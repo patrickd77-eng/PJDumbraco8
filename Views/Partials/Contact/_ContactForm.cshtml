@@ -21,11 +21,11 @@
                 @Html.ValidationMessageFor(m => m.Email)
             </div>
             <div style="padding-bottom:10px;">
-                @Html.TextAreaFor(m => m.Message, new { placeholder = "Your Message", rows = "4", autocomplete="off", cols="12"})
+                @Html.TextAreaFor(m => m.Message, new { placeholder = "Your Message", rows = "4", autocomplete = "off", cols = "12" })
                 @Html.ValidationMessageFor(m => m.Message)
             </div>
             <div style="text-align:center;">
-                <input type="submit" name="Submit" value="Submit" />
+                <input type="submit" name="Submit" class="hvr-grow-shadow" value="Submit" />
             </div>
         </form>
     }

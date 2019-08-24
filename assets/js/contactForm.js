@@ -19,7 +19,7 @@
 
 $("#contact-button").click(function (e) {
     e.preventDefault();
-    $("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
+    $("html, body").animate({ scrollTop: ($("#contactarea").offset().top) - 100 }, "slow");
     $('body').removeClass("is-menu-visible");
     setTimeout(function () { $("#contact-form-container").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100); }, 500);
 

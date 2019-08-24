@@ -1,6 +1,7 @@
 ﻿@inherits UmbracoViewPage
 
 <title>@Umbraco.AssignedContentItem.Value("pageTabName", defaultValue: "PJD | Developer")</title>
+<!-- Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="description" content="@Umbraco.AssignedContentItem.Value("siteDescription", fallback: Fallback.ToAncestors)" />
@@ -9,8 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
 <meta name="revisit-after" content="@Umbraco.AssignedContentItem.Value("siteCrawlFrequency", fallback: Fallback.ToAncestors)">
-<meta name="copyright" content="@Umbraco.AssignedContentItem.Value("copyrightOwner", fallback: Fallback.ToAncestors)"/>
+<meta name="copyright" content="@Umbraco.AssignedContentItem.Value("copyrightOwner", fallback: Fallback.ToAncestors)" />
 <meta name="author" content="@Umbraco.AssignedContentItem.Value("siteAuthorTag", fallback: Fallback.ToAncestors)">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- Styles and Favicon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css" />
 <link rel="stylesheet" href="/assets/css/main.css" />
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -26,6 +32,3 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">

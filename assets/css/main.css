@@ -154,7 +154,7 @@ a {
     -webkit-transition: color 0.2s ease-in-out;
     -ms-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
     a:hover {
@@ -2794,6 +2794,10 @@ ul.actions {
         text-transform: none !important;
     }
 
+    /*.icon:hover {
+        box-shadow: 0 0 0 4px rgba(255,255,255,1);
+    }*/
+
     .icon > .label {
         display: none;
     }
@@ -3229,7 +3233,7 @@ ul.icons {
 
 @media screen and (max-width: 736px) {
     #banner {
-        height: auto !important;
+        height: 150px !important;
         min-height: 0;
         padding: 4rem 2rem 4rem 2rem;
     }
@@ -3275,18 +3279,45 @@ body.is-preload #banner:before {
     opacity: 1;
 }
 
+
+
 /* CTA */
 #cta {
-    background-color: #ce1b28;
-    color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.025);
+    color: white;
     background-attachment: fixed !important;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    font-weight: bolder;
     text-align: center;
     z-index: 1;
 }
+
+    #cta.is-preload *, cta.is-preload *:before, cta.is-preload *:after {
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+    }
+
+    #cta.is-preload {
+        opacity: 0;
+    }
+
+        #cta.is-preload:after {
+            -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+            -moz-animation: fadein 2s; /* Firefox < 16 */
+            -ms-animation: fadein 2s; /* Internet Explorer */
+            -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+        }
+
 
     #cta input, #cta select, #cta textarea {
         color: #ffffff;
@@ -4230,7 +4261,7 @@ body {
     }
 
     #menu a {
-        color: #ce1b28;
+        color: white;
     }
 
     #menu strong, #menu b {
@@ -4340,6 +4371,11 @@ body {
                         color: red;
                         font-size: 15px;
                     }
+
+                #menu > ul.links > li > ol > li > a:hover {
+                    color: red;
+                    font-size: 15px;
+                }
 
                 #menu > ul.links > li:first-child > a {
                     border-top: 0;
