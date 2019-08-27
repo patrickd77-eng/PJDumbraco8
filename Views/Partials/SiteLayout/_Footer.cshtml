@@ -1,4 +1,9 @@
-﻿@inherits  UmbracoViewPage
+﻿@inherits  UmbracoViewPage<IPublishedContent>
+@using Umbraco.Web.Models
+
+@{
+   IEnumerable<Link> footerLinks = Umbraco.AssignedContentItem.Value<IEnumerable<Link>>("footerLinks", fallback: Fallback.ToAncestors); 
+}
 
 <footer id="footer">
     <div class="inner">
@@ -13,17 +18,26 @@
             <section></section>
             <section>
                 <h4 style="text-align:center">Networks</h4>
-                <hr />
+                <hr />           
+                @{
+
+                    if (footerLinks.Any())
+                    {
                 <ul class="plain">
-                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link1URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link1Icon",fallback: Fallback.ToAncestors) hvr-grow"></i>@Umbraco.AssignedContentItem.Value("link1Text", fallback: Fallback.ToAncestors)</a></li>
-                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link2URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link2Icon",fallback: Fallback.ToAncestors) hvr-grow"></i>@Umbraco.AssignedContentItem.Value("link2Text", fallback: Fallback.ToAncestors)</a></li>
-                    <li><a target="_blank" href="@Umbraco.AssignedContentItem.Value("link3URL",fallback: Fallback.ToAncestors)"><i class="icon @Umbraco.AssignedContentItem.Value("link3Icon",fallback: Fallback.ToAncestors) hvr-grow"></i>@Umbraco.AssignedContentItem.Value("link3Text", fallback: Fallback.ToAncestors)</a></li>
+                    @foreach (var link in footerLinks)
+                {
+                        <li><i class="icon fa fa-fw fa-@link.Name.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
+                        
+                }
                 </ul>
+                    }
+
+        }
             </section>
         </div>
     </div>
+    <hr />
     <div class="outer">
-
         <div class="copyright" style="border:none;padding:0px;">
             <div style="font-size:16px;color:white;">@Umbraco.AssignedContentItem.Value("footerCopyrightText", fallback: Fallback.ToAncestors)</div>
             <br />

@@ -1,4 +1,4 @@
-﻿@using System.Web.Optimization
+﻿
 @{
     Layout = null;
 }
@@ -6,14 +6,13 @@
 <html>
 <!-- Head (meta) -->
 <head>
-    @{ Html.RenderAction("RenderHeadHtml", "SiteLayout");}
-
+    @{ Html.RenderAction("RenderMetadata", "SiteLayout");}
 </head>
-
 <!-- Body -->
 <body class="is-preload">
     <!-- Header and Nav -->
     @{ Html.RenderAction("RenderNavigation", "SiteLayout");}
+
     @RenderBody()
     <!-- Footer -->
     @{ Html.RenderAction("RenderFooter", "SiteLayout");}

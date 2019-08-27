@@ -15,9 +15,9 @@ namespace PJDu8.Controllers
     {
         const string PARTIAL_VIEW_FOLDER_PATH = "~/Views/Partials/SiteLayout/";
 
-        public ActionResult RenderHeadHtml()
+        public ActionResult RenderMetadata()
         {
-            return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Head.cshtml");
+            return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Metadata.cshtml");
         }
         /// <summary>
         /// Renders the top navigation in the header partial
@@ -31,6 +31,7 @@ namespace PJDu8.Controllers
         }
         public ActionResult RenderFooter()
         {
+         
             return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Footer.cshtml");
         }
         public ActionResult RenderCTA()
