@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "11687e355548140f")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ee44c0598e037d1e")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -155,14 +155,14 @@ namespace Umbraco.Web.PublishedModels
 		public string ContactHeader => FooterControls.GetContactHeader(this);
 
 		///<summary>
-		/// Footer Site Copyright Text: The copyright text in footer.
+		/// Footer Copyright Text: The copyright text in footer.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerCopyrightText")]
 		public string FooterCopyrightText => FooterControls.GetFooterCopyrightText(this);
 
 		///<summary>
-		/// FooterLinks
+		/// Footer Links
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerLinks")]
@@ -527,11 +527,11 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string ContactHeader { get; }
 
-		/// <summary>Footer Site Copyright Text</summary>
+		/// <summary>Footer Copyright Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string FooterCopyrightText { get; }
 
-		/// <summary>FooterLinks</summary>
+		/// <summary>Footer Links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		IEnumerable<Umbraco.Web.Models.Link> FooterLinks { get; }
 
@@ -577,24 +577,24 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetContactHeader(IFooterControls that) => that.Value<string>("contactHeader");
 
 		///<summary>
-		/// Footer Site Copyright Text: The copyright text in footer.
+		/// Footer Copyright Text: The copyright text in footer.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerCopyrightText")]
 		public string FooterCopyrightText => GetFooterCopyrightText(this);
 
-		/// <summary>Static getter for Footer Site Copyright Text</summary>
+		/// <summary>Static getter for Footer Copyright Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetFooterCopyrightText(IFooterControls that) => that.Value<string>("footerCopyrightText");
 
 		///<summary>
-		/// FooterLinks
+		/// Footer Links
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerLinks")]
 		public IEnumerable<Umbraco.Web.Models.Link> FooterLinks => GetFooterLinks(this);
 
-		/// <summary>Static getter for FooterLinks</summary>
+		/// <summary>Static getter for Footer Links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static IEnumerable<Umbraco.Web.Models.Link> GetFooterLinks(IFooterControls that) => that.Value<IEnumerable<Umbraco.Web.Models.Link>>("footerLinks");
 
