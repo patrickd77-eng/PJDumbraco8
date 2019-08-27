@@ -1,10 +1,8 @@
 ﻿@inherits  UmbracoViewPage<IPublishedContent>
 @using Umbraco.Web.Models
-
 @{
-   IEnumerable<Link> footerLinks = Umbraco.AssignedContentItem.Value<IEnumerable<Link>>("footerLinks", fallback: Fallback.ToAncestors); 
+    IEnumerable<Link> footerLinks = Umbraco.AssignedContentItem.Value<IEnumerable<Link>>("footerLinks", fallback: Fallback.ToAncestors);
 }
-
 <footer id="footer">
     <div class="inner">
         <div class="content">
@@ -18,21 +16,20 @@
             <section></section>
             <section>
                 <h4 style="text-align:center">Networks</h4>
-                <hr />           
+                <hr />
                 @{
-
                     if (footerLinks.Any())
                     {
-                <ul class="plain">
-                    @foreach (var link in footerLinks)
-                {
-                        <li><i class="icon fa fa-fw fa-@link.Name.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
-                        
-                }
-                </ul>
+                        <ul class="plain">
+                            @foreach (var link in footerLinks)
+                            {
+                                <li><i class="icon fa fa-fw fa-@link.Name.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
+
+                            }
+                        </ul>
                     }
 
-        }
+                }
             </section>
         </div>
     </div>
@@ -43,6 +40,5 @@
             <br />
             <p style="font-size:9px;">@Umbraco.AssignedContentItem.Value("pageStylingCredit", fallback: Fallback.ToAncestors)</p>
         </div>
-
     </div>
 </footer>
