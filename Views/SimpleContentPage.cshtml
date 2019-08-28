@@ -1,12 +1,30 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
-@using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = "Master.cshtml";
 }
+<!-- CTA -->
 @{ Html.RenderAction("RenderCTA", "SiteLayout");}
 <!-- Content Grid -->
 <section class="wrapper">
     <div class="inner">
-        @Html.GetGridHtml(Model, "contentGridControl")
+        
+        @Html.GetGridHtml(Model, "contentGridControl")     
+        
+           @{
+               if(Umbraco.AssignedContentItem.Name == "Projects") { 
+
+                   IPublishedContent currentPage = Umbraco.Content(Umbraco.AssignedContentItem.Id);
+                   IEnumerable<IPublishedContent>children = currentPage.Children();
+
+                       foreach (var child in children)
+                       {
+                        <div style="padding:10px;">
+                                        <h2 style="text-decoration:underline;"><i class="icon fa fa-fw fa-code-fork"></i><a href="@child.Url">@child.Name.</a></h2>
+                                        <p style="padding-left:3em;">@child.Value("cTABody",defaultValue: "test").Replace("<p>","").Replace("</p>","")</p>
+                        </div>
+                        <br />
+                       }
+               }
+          }   
     </div>
 </section>

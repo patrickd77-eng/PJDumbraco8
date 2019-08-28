@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "df3c0dfb8494751a")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "faf711d9e3b92c4e")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -273,74 +273,6 @@ namespace Umbraco.Web.PublishedModels
 
 		// ctor
 		public SimpleContentPage(IPublishedContent content)
-			: base(content)
-		{ }
-
-		// properties
-
-		///<summary>
-		/// Content Grid Control: Enter page content
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("contentGridControl")]
-		public Newtonsoft.Json.Linq.JToken ContentGridControl => ContentControls.GetContentGridControl(this);
-
-		///<summary>
-		/// CTA Body: CTA Normal text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("cTABody")]
-		public IHtmlString CTabody => Intro.GetCTabody(this);
-
-		///<summary>
-		/// CTA Header: Header for CTA.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("cTAHeader")]
-		public string CTaheader => Intro.GetCTaheader(this);
-
-		///<summary>
-		/// CTA Image: Background scrolling image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("cTAImage")]
-		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
-
-		///<summary>
-		/// Can Index: Can *this* page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("canIndex")]
-		public string CanIndex => MetaControls.GetCanIndex(this);
-
-		///<summary>
-		/// This Page's Name: A "Site Title" for this page only, appearing on the tab text.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageTabName")]
-		public string PageTabName => MetaControls.GetPageTabName(this);
-	}
-
-	/// <summary>Projects Page</summary>
-	[PublishedModel("projects")]
-	public partial class Projects : PublishedContentModel, IContentControls, IIntro, IMetaControls
-	{
-		// helpers
-#pragma warning disable 0109 // new is redundant
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "projects";
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new static IPublishedContentType GetModelContentType()
-			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Projects, TValue>> selector)
-			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-#pragma warning restore 0109
-
-		// ctor
-		public Projects(IPublishedContent content)
 			: base(content)
 		{ }
 
