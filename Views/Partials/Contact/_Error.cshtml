@@ -1,3 +1,15 @@
 ﻿<h3>Woops... <i class="icon fa-fw fa-bug"></i></h3>
-<p>Sorry, there was a problem with the form. You can <a style="text-decoration:underline" href="mailto:patrick_davis97@hotmail.co.uk">reach me via my email</a> instead.</p>
-
+<p>Sorry, it looks like there was a problem with the form. You can <a style="text-decoration:underline" href="mailto:patrick_davis97@hotmail.co.uk">reach me via my email</a> instead.</p>
+<button onclick="(function () {
+    $('#spamWarning').text('Please wait while the form resets.');
+    $('#spamWarning').css('display','inline');
+     setTimeout(function () {
+    $('#form-result').hide();
+   $('#form-outer').show();
+       return false;
+       }, 5000);
+})();return false;">Try again?</button>
+<br />
+<div>
+    <p style="display:none;" id="spamWarning"></p>
+</div>

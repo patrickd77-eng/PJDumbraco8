@@ -1,0 +1,32 @@
+.iconBox {
+    cursor: pointer;
+    margin-right: 5px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #bbbabf;
+    -webkit-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+    border-radius: 3px;
+    width: 55px;
+}
+
+.iconBox:hover {
+    border: 1px solid #1c264f;
+}
+
+.faIcon {
+    font-size: 40px;
+}
+.removeLink {
+    margin: 5px 0 0 0;
+}
+.removeLink:hover > a, .iconBox:hover > .selectText {
+    color: #1c264f;
+}
+.selectText {
+    font-weight: bold;
+    color: #c5c1c1;
+}

@@ -1,7 +1,13 @@
-﻿@{
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
     Layout = "Master.cshtml";
 }
 <!-- CTA -->
 @{ Html.RenderAction("RenderCTA", "SiteLayout");}
-<!-- Testimonials -->
-@{ Html.RenderAction("RenderTestimonials", "Portfolio");}
+<!-- Grid -->
+<section class="wrapper">
+    <div class="inner">
+        @Html.GetGridHtml(Model, "contentGridControl")
+    </div>
+</section>

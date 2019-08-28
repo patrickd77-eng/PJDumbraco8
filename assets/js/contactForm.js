@@ -19,10 +19,9 @@
 
 $("#contact-button").click(function (e) {
     e.preventDefault();
-    $("html, body").animate({ scrollTop: ($("#contactarea").offset().top) - 100 }, "slow");
+    $("html, body").animate({ scrollTop: ($("#contactarea").offset().top) - 100 }, "fast");
     $('body').removeClass("is-menu-visible");
     setTimeout(function () { $("#contact-form-container").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100); }, 500);
-
 });
 
 contactForm.init();

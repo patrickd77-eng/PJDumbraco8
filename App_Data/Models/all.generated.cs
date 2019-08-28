@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a3d96e520c9791eb")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "df3c0dfb8494751a")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 
 // FILE: models.generated.cs
@@ -66,7 +66,7 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Banner Background Image
+		/// Banner Background Image: Background image that loads on page load
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("bannerBackgroundImage")]
@@ -87,25 +87,25 @@ namespace Umbraco.Web.PublishedModels
 		public string HighlightsOneHeader => this.Value<string>("highlightsOneHeader");
 
 		///<summary>
-		/// Highlights One Icon: fontawesome.com/v4.7.0/cheatsheet/
+		/// Highlights One Icon: FA Icon
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsOneIcon")]
-		public string HighlightsOneIcon => this.Value<string>("highlightsOneIcon");
+		public object HighlightsOneIcon => this.Value("highlightsOneIcon");
 
 		///<summary>
 		/// Highlights One Text: Highlights One Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsOneText")]
-		public string HighlightsOneText => this.Value<string>("highlightsOneText");
+		public IHtmlString HighlightsOneText => this.Value<IHtmlString>("highlightsOneText");
 
 		///<summary>
 		/// Highlights Text: Highlights normal text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsSubText")]
-		public string HighlightsSubText => this.Value<string>("highlightsSubText");
+		public IHtmlString HighlightsSubText => this.Value<IHtmlString>("highlightsSubText");
 
 		///<summary>
 		/// Highlights Three Header: Highlights Three Header
@@ -115,18 +115,18 @@ namespace Umbraco.Web.PublishedModels
 		public string HighlightsThreeHeader => this.Value<string>("highlightsThreeHeader");
 
 		///<summary>
-		/// Highlights Three Icon: fontawesome.com/v4.7.0/cheatsheet/
+		/// Highlights Three Icon: FA Icon
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsThreeIcon")]
-		public string HighlightsThreeIcon => this.Value<string>("highlightsThreeIcon");
+		public object HighlightsThreeIcon => this.Value("highlightsThreeIcon");
 
 		///<summary>
 		/// Highlights Three Text: Highlights Three Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsThreeText")]
-		public string HighlightsThreeText => this.Value<string>("highlightsThreeText");
+		public IHtmlString HighlightsThreeText => this.Value<IHtmlString>("highlightsThreeText");
 
 		///<summary>
 		/// Highlights Two Header: Highlights Two Header
@@ -136,18 +136,18 @@ namespace Umbraco.Web.PublishedModels
 		public string HighlightsTwoHeader => this.Value<string>("highlightsTwoHeader");
 
 		///<summary>
-		/// Highlights Two Icon: fontawesome.com/v4.7.0/cheatsheet/
+		/// Highlights Two Icon: FA Icon 2
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsTwoIcon")]
-		public string HighlightsTwoIcon => this.Value<string>("highlightsTwoIcon");
+		public object HighlightsTwoIcon => this.Value("highlightsTwoIcon");
 
 		///<summary>
 		/// Highlights Two Text: Highlights two body text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("highlightsTwoText")]
-		public string HighlightsTwoText => this.Value<string>("highlightsTwoText");
+		public IHtmlString HighlightsTwoText => this.Value<IHtmlString>("highlightsTwoText");
 
 		///<summary>
 		/// Page Banner Sub Title: The body content
@@ -178,14 +178,14 @@ namespace Umbraco.Web.PublishedModels
 		public string FooterCopyrightText => FooterControls.GetFooterCopyrightText(this);
 
 		///<summary>
-		/// Footer Links
+		/// Footer Links: Configurable URLs
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerLinks")]
 		public IEnumerable<Umbraco.Web.Models.Link> FooterLinks => FooterControls.GetFooterLinks(this);
 
 		///<summary>
-		/// Footer Link Title
+		/// Footer Link Title: The title for footer links
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerLinkTitle")]
@@ -255,7 +255,7 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// Can Index: Can this page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
+		/// Can Index: Can *this* page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("canIndex")]
@@ -295,18 +295,72 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Body Text Sub Title Area
+		/// Content Grid Control: Enter page content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("bodyTextSubTitleText")]
-		public IHtmlString BodyTextSubTitleText => this.Value<IHtmlString>("bodyTextSubTitleText");
+		[ImplementPropertyType("contentGridControl")]
+		public Newtonsoft.Json.Linq.JToken ContentGridControl => ContentControls.GetContentGridControl(this);
 
 		///<summary>
-		/// Main Body Text Title
+		/// CTA Body: CTA Normal text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("bodyTextTitle")]
-		public string BodyTextTitle => this.Value<string>("bodyTextTitle");
+		[ImplementPropertyType("cTABody")]
+		public IHtmlString CTabody => Intro.GetCTabody(this);
+
+		///<summary>
+		/// CTA Header: Header for CTA.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAHeader")]
+		public string CTaheader => Intro.GetCTaheader(this);
+
+		///<summary>
+		/// CTA Image: Background scrolling image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("cTAImage")]
+		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
+
+		///<summary>
+		/// Can Index: Can *this* page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("canIndex")]
+		public string CanIndex => MetaControls.GetCanIndex(this);
+
+		///<summary>
+		/// This Page's Name: A "Site Title" for this page only, appearing on the tab text.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("pageTabName")]
+		public string PageTabName => MetaControls.GetPageTabName(this);
+	}
+
+	/// <summary>Projects Page</summary>
+	[PublishedModel("projects")]
+	public partial class Projects : PublishedContentModel, IContentControls, IIntro, IMetaControls
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const string ModelTypeAlias = "projects";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Projects, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Projects(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
 
 		///<summary>
 		/// Content Grid Control: Enter page content
@@ -337,68 +391,7 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
 
 		///<summary>
-		/// Can Index: Can this page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("canIndex")]
-		public string CanIndex => MetaControls.GetCanIndex(this);
-
-		///<summary>
-		/// This Page's Name: A "Site Title" for this page only, appearing on the tab text.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageTabName")]
-		public string PageTabName => MetaControls.GetPageTabName(this);
-	}
-
-	/// <summary>Portfolio Page</summary>
-	[PublishedModel("projects")]
-	public partial class Projects : PublishedContentModel, IIntro, IMetaControls
-	{
-		// helpers
-#pragma warning disable 0109 // new is redundant
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const string ModelTypeAlias = "projects";
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public new static IPublishedContentType GetModelContentType()
-			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Projects, TValue>> selector)
-			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-#pragma warning restore 0109
-
-		// ctor
-		public Projects(IPublishedContent content)
-			: base(content)
-		{ }
-
-		// properties
-
-		///<summary>
-		/// CTA Body: CTA Normal text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("cTABody")]
-		public IHtmlString CTabody => Intro.GetCTabody(this);
-
-		///<summary>
-		/// CTA Header: Header for CTA.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("cTAHeader")]
-		public string CTaheader => Intro.GetCTaheader(this);
-
-		///<summary>
-		/// CTA Image: Background scrolling image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("cTAImage")]
-		public IPublishedContent CTaimage => Intro.GetCTaimage(this);
-
-		///<summary>
-		/// Can Index: Can this page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
+		/// Can Index: Can *this* page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("canIndex")]
@@ -527,7 +520,7 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Can Index: Can this page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
+		/// Can Index: Can *this* page be crawled by bots? I.E. Can it appear in search engines. "index, follow" means yes.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("canIndex")]
@@ -622,7 +615,7 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetFooterCopyrightText(IFooterControls that) => that.Value<string>("footerCopyrightText");
 
 		///<summary>
-		/// Footer Links
+		/// Footer Links: Configurable URLs
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerLinks")]
@@ -633,7 +626,7 @@ namespace Umbraco.Web.PublishedModels
 		public static IEnumerable<Umbraco.Web.Models.Link> GetFooterLinks(IFooterControls that) => that.Value<IEnumerable<Umbraco.Web.Models.Link>>("footerLinks");
 
 		///<summary>
-		/// Footer Link Title
+		/// Footer Link Title: The title for footer links
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerLinkTitle")]
@@ -762,7 +755,7 @@ namespace Umbraco.Web.PublishedModels
 	}
 
 	// Mixin Content Type with alias "contentControls"
-	/// <summary>Content Controls</summary>
+	/// <summary>Content Grid Control</summary>
 	public partial interface IContentControls : IPublishedContent
 	{
 		/// <summary>Content Grid Control</summary>
@@ -770,7 +763,7 @@ namespace Umbraco.Web.PublishedModels
 		Newtonsoft.Json.Linq.JToken ContentGridControl { get; }
 	}
 
-	/// <summary>Content Controls</summary>
+	/// <summary>Content Grid Control</summary>
 	[PublishedModel("contentControls")]
 	public partial class ContentControls : PublishedContentModel, IContentControls
 	{

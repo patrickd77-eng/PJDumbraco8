@@ -410,7 +410,6 @@
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
     <Content Include="assets\css\font-awesome.min.css" />
     <Content Include="assets\css\main.css" />
-    <Content Include="assets\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\js\breakpoints.min.js" />
     <Content Include="assets\js\browser.min.js" />
     <Content Include="assets\js\jquery.min.js" />
@@ -2203,9 +2202,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\SiteLayoutController.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\NavigationLink.cs" />
@@ -2224,11 +2221,6 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
-    <Content Include="assets\fonts\fontawesome-webfont.eot" />
-    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
-    <Content Include="assets\fonts\fontawesome-webfont.woff" />
-    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
-    <Content Include="assets\fonts\FontAwesome.otf" />
     <Content Include="assets\sass\base\_page.scss" />
     <Content Include="assets\sass\base\_reset.scss" />
     <Content Include="assets\sass\base\_typography.scss" />
@@ -2286,8 +2278,6 @@
     <Content Include="Views\Partials\Home\_Banner.cshtml" />
     <Content Include="Views\Partials\Home\_Highlights.cshtml" />
     <Content Include="Views\Partials\SiteLayout\_CTA.cshtml" />
-    <Content Include="Views\Partials\Portfolio\_Testimonials.cshtml" />
-    <Content Include="Views\Partials\Content\_MainBodyTop.cshtml" />
     <Content Include="Views\Partials\SiteLayout\_Metadata.cshtml" />
     <Content Include="Views\HomePage.cshtml" />
     <Content Include="Views\Projects.cshtml" />

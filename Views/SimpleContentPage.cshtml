@@ -4,11 +4,9 @@
     Layout = "Master.cshtml";
 }
 @{ Html.RenderAction("RenderCTA", "SiteLayout");}
-@{ Html.RenderAction("RenderBodyTop", "Content");}
-<hr />
 <!-- Content Grid -->
 <section class="wrapper">
     <div class="inner">
-        @Html.GetGridHtml(Model, "contentGridControl", "bootstrap3")
+        @Html.GetGridHtml(Model, "contentGridControl")
     </div>
 </section>
