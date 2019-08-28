@@ -1,10 +1,11 @@
-﻿<!-- Main -->
+﻿<!-- Body Top -->
 @inherits UmbracoViewPage
+@using ContentModels = Umbraco.Web.PublishedModels;
 <section id="main" class="inner">
     <div class="content">
         <header class="major special">
             <h2>@Umbraco.AssignedContentItem.Value("bodyTextTitle")</h2>
-            @Umbraco.AssignedContentItem.Value("mainBodyText")
+            @Umbraco.AssignedContentItem.Value("bodyTextSubTitleText")
         </header>
     </div>
 </section>

@@ -1,5 +1,14 @@
-﻿@{
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
     Layout = "Master.cshtml";
 }
 @{ Html.RenderAction("RenderCTA", "SiteLayout");}
-@{ Html.RenderAction("RenderBodyText", "Content");}
+@{ Html.RenderAction("RenderBodyTop", "Content");}
+<hr />
+<!-- Content Grid -->
+<section class="wrapper">
+    <div class="inner">
+        @Html.GetGridHtml(Model, "contentGridControl", "bootstrap3")
+    </div>
+</section>

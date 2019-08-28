@@ -7,9 +7,9 @@ namespace PJDu8.Controllers
     {
         const string PARTIAL_VIEW_FOLDER_PATH = "~/Views/Partials/Content/";
 
-        public ActionResult RenderBodyText()
+        public ActionResult RenderBodyTop()
         {
-            return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_MainBody.cshtml");
+            return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_MainBodyTop.cshtml");
         }
 
     }

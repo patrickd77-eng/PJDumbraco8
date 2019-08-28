@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ee44c0598e037d1e")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a3d96e520c9791eb")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
@@ -169,6 +169,13 @@ namespace Umbraco.Web.PublishedModels
 		public IEnumerable<Umbraco.Web.Models.Link> FooterLinks => FooterControls.GetFooterLinks(this);
 
 		///<summary>
+		/// Footer Link Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("footerLinkTitle")]
+		public string FooterLinkTitle => FooterControls.GetFooterLinkTitle(this);
+
+		///<summary>
 		/// Page Styling Credit: The credit tag for page's front end design (templated.co)
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -248,7 +255,7 @@ namespace Umbraco.Web.PublishedModels
 
 	/// <summary>General Content Page</summary>
 	[PublishedModel("simpleContentPage")]
-	public partial class SimpleContentPage : PublishedContentModel, IIntro, IMetaControls
+	public partial class SimpleContentPage : PublishedContentModel, IContentControls, IIntro, IMetaControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -272,6 +279,13 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Body Text Sub Title Area
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("bodyTextSubTitleText")]
+		public IHtmlString BodyTextSubTitleText => this.Value<IHtmlString>("bodyTextSubTitleText");
+
+		///<summary>
 		/// Main Body Text Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -279,11 +293,11 @@ namespace Umbraco.Web.PublishedModels
 		public string BodyTextTitle => this.Value<string>("bodyTextTitle");
 
 		///<summary>
-		/// Main Body Text
+		/// Content Grid Control: Enter page content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mainBodyText")]
-		public IHtmlString MainBodyText => this.Value<IHtmlString>("mainBodyText");
+		[ImplementPropertyType("contentGridControl")]
+		public Newtonsoft.Json.Linq.JToken ContentGridControl => ContentControls.GetContentGridControl(this);
 
 		///<summary>
 		/// CTA Body: CTA Normal text
@@ -535,6 +549,10 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		IEnumerable<Umbraco.Web.Models.Link> FooterLinks { get; }
 
+		/// <summary>Footer Link Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string FooterLinkTitle { get; }
+
 		/// <summary>Page Styling Credit</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string PageStylingCredit { get; }
@@ -597,6 +615,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Footer Links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static IEnumerable<Umbraco.Web.Models.Link> GetFooterLinks(IFooterControls that) => that.Value<IEnumerable<Umbraco.Web.Models.Link>>("footerLinks");
+
+		///<summary>
+		/// Footer Link Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("footerLinkTitle")]
+		public string FooterLinkTitle => GetFooterLinkTitle(this);
+
+		/// <summary>Static getter for Footer Link Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetFooterLinkTitle(IFooterControls that) => that.Value<string>("footerLinkTitle");
 
 		///<summary>
 		/// Page Styling Credit: The credit tag for page's front end design (templated.co)
@@ -716,9 +745,18 @@ namespace Umbraco.Web.PublishedModels
 		public static string GetSiteKeywords(IGlobalMetaControls that) => that.Value<string>("siteKeywords");
 	}
 
+	// Mixin Content Type with alias "contentControls"
+	/// <summary>Content Controls</summary>
+	public partial interface IContentControls : IPublishedContent
+	{
+		/// <summary>Content Grid Control</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		Newtonsoft.Json.Linq.JToken ContentGridControl { get; }
+	}
+
 	/// <summary>Content Controls</summary>
 	[PublishedModel("contentControls")]
-	public partial class ContentControls : PublishedContentModel
+	public partial class ContentControls : PublishedContentModel, IContentControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -746,7 +784,11 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("contentGridControl")]
-		public Newtonsoft.Json.Linq.JToken ContentGridControl => this.Value<Newtonsoft.Json.Linq.JToken>("contentGridControl");
+		public Newtonsoft.Json.Linq.JToken ContentGridControl => GetContentGridControl(this);
+
+		/// <summary>Static getter for Content Grid Control</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static Newtonsoft.Json.Linq.JToken GetContentGridControl(IContentControls that) => that.Value<Newtonsoft.Json.Linq.JToken>("contentGridControl");
 	}
 
 	/// <summary>Folder</summary>

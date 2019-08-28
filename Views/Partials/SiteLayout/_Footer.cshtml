@@ -17,16 +17,24 @@
             </section>
             <section></section>
             <section>
-                <h4 style="text-align:center">Networks</h4>
+                <h4 style="text-align:center">@Umbraco.AssignedContentItem.Value("footerLinkTitle", fallback:Fallback.ToAncestors)</h4>
                 <hr />           
                 @{
-
                     if (footerLinks.Any())
                     {
                 <ul class="plain">
                     @foreach (var link in footerLinks)
-                {
-                        <li><i class="icon fa fa-fw fa-@link.Name.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
+                    {
+                        var className = link.Name;
+                        if (className.Contains("Email"))
+                        {
+                            className = "envelope-o";
+                        }
+                        else if (className.Contains("Course"))
+                        {
+                            className = "graduation-cap";
+                        }
+                        <li><i class="icon fa fa-fw fa-@className.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
                         
                 }
                 </ul>
