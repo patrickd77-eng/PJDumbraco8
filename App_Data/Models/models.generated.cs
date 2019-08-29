@@ -19,14 +19,14 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "faf711d9e3b92c4e")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5f8cb257ebb0658c")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.19")]
 
 namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Home Page</summary>
 	[PublishedModel("homePage")]
-	public partial class HomePage : PublishedContentModel, IFooterControls, IGlobalMetaControls, IIntro, IMetaControls
+	public partial class HomePage : PublishedContentModel, IFooterControls, IGlobalMenuControls, IGlobalMetaControls, IIntro, IMetaControls, INavBarControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -183,6 +183,20 @@ namespace Umbraco.Web.PublishedModels
 		public string PageStylingCredit => FooterControls.GetPageStylingCredit(this);
 
 		///<summary>
+		/// Home Icon Picker: Home Icon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("homeIconPicker")]
+		public object HomeIconPicker => GlobalMenuControls.GetHomeIconPicker(this);
+
+		///<summary>
+		/// Home Icon Text / Site Tite: Text for top leftmost of page.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("homeIconTextSiteTite")]
+		public string HomeIconTextSiteTite => GlobalMenuControls.GetHomeIconTextSiteTite(this);
+
+		///<summary>
 		/// Copyright Owner: Site's Copyright Tag
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
@@ -195,13 +209,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("siteAuthorTag")]
 		public string SiteAuthorTag => GlobalMetaControls.GetSiteAuthorTag(this);
-
-		///<summary>
-		/// Site Crawl Frequency: How often search engines revisit site. Format must be "X days" i.e. 31 days
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteCrawlFrequency")]
-		public string SiteCrawlFrequency => GlobalMetaControls.GetSiteCrawlFrequency(this);
 
 		///<summary>
 		/// Site Description: A general description of the entire site.
@@ -251,6 +258,20 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTabName")]
 		public string PageTabName => MetaControls.GetPageTabName(this);
+
+		///<summary>
+		/// Contact Icon: Icon for Contact Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("contactIconPicker")]
+		public object ContactIconPicker => NavBarControls.GetContactIconPicker(this);
+
+		///<summary>
+		/// Contact Text: Text for contact icon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("contactText")]
+		public string ContactText => NavBarControls.GetContactText(this);
 	}
 
 	/// <summary>General Content Page</summary>
@@ -459,7 +480,7 @@ namespace Umbraco.Web.PublishedModels
 	}
 
 	// Mixin Content Type with alias "footerControls"
-	/// <summary>Footer Controls</summary>
+	/// <summary>Global Footer Controls</summary>
 	public partial interface IFooterControls : IPublishedContent
 	{
 		/// <summary>Contact Header</summary>
@@ -483,7 +504,7 @@ namespace Umbraco.Web.PublishedModels
 		string PageStylingCredit { get; }
 	}
 
-	/// <summary>Footer Controls</summary>
+	/// <summary>Global Footer Controls</summary>
 	[PublishedModel("footerControls")]
 	public partial class FooterControls : PublishedContentModel, IFooterControls
 	{
@@ -576,10 +597,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string SiteAuthorTag { get; }
 
-		/// <summary>Site Crawl Frequency</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		string SiteCrawlFrequency { get; }
-
 		/// <summary>Site Description</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string SiteDescription { get; }
@@ -635,17 +652,6 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Site Author Tag</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetSiteAuthorTag(IGlobalMetaControls that) => that.Value<string>("siteAuthorTag");
-
-		///<summary>
-		/// Site Crawl Frequency: How often search engines revisit site. Format must be "X days" i.e. 31 days
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("siteCrawlFrequency")]
-		public string SiteCrawlFrequency => GetSiteCrawlFrequency(this);
-
-		/// <summary>Static getter for Site Crawl Frequency</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static string GetSiteCrawlFrequency(IGlobalMetaControls that) => that.Value<string>("siteCrawlFrequency");
 
 		///<summary>
 		/// Site Description: A general description of the entire site.
@@ -714,6 +720,128 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Content Grid Control</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static Newtonsoft.Json.Linq.JToken GetContentGridControl(IContentControls that) => that.Value<Newtonsoft.Json.Linq.JToken>("contentGridControl");
+	}
+
+	// Mixin Content Type with alias "navBarControls"
+	/// <summary>Global Nav Bar Controls</summary>
+	public partial interface INavBarControls : IPublishedContent
+	{
+		/// <summary>Contact Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		object ContactIconPicker { get; }
+
+		/// <summary>Contact Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string ContactText { get; }
+	}
+
+	/// <summary>Global Nav Bar Controls</summary>
+	[PublishedModel("navBarControls")]
+	public partial class NavBarControls : PublishedContentModel, INavBarControls
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const string ModelTypeAlias = "navBarControls";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<NavBarControls, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public NavBarControls(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Contact Icon: Icon for Contact Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("contactIconPicker")]
+		public object ContactIconPicker => GetContactIconPicker(this);
+
+		/// <summary>Static getter for Contact Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static object GetContactIconPicker(INavBarControls that) => that.Value("contactIconPicker");
+
+		///<summary>
+		/// Contact Text: Text for contact icon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("contactText")]
+		public string ContactText => GetContactText(this);
+
+		/// <summary>Static getter for Contact Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetContactText(INavBarControls that) => that.Value<string>("contactText");
+	}
+
+	// Mixin Content Type with alias "globalMenuControls"
+	/// <summary>Global Menu Controls</summary>
+	public partial interface IGlobalMenuControls : IPublishedContent
+	{
+		/// <summary>Home Icon Picker</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		object HomeIconPicker { get; }
+
+		/// <summary>Home Icon Text / Site Tite</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		string HomeIconTextSiteTite { get; }
+	}
+
+	/// <summary>Global Menu Controls</summary>
+	[PublishedModel("globalMenuControls")]
+	public partial class GlobalMenuControls : PublishedContentModel, IGlobalMenuControls
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const string ModelTypeAlias = "globalMenuControls";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<GlobalMenuControls, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public GlobalMenuControls(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Home Icon Picker: Home Icon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("homeIconPicker")]
+		public object HomeIconPicker => GetHomeIconPicker(this);
+
+		/// <summary>Static getter for Home Icon Picker</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static object GetHomeIconPicker(IGlobalMenuControls that) => that.Value("homeIconPicker");
+
+		///<summary>
+		/// Home Icon Text / Site Tite: Text for top leftmost of page.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("homeIconTextSiteTite")]
+		public string HomeIconTextSiteTite => GetHomeIconTextSiteTite(this);
+
+		/// <summary>Static getter for Home Icon Text / Site Tite</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static string GetHomeIconTextSiteTite(IGlobalMenuControls that) => that.Value<string>("homeIconTextSiteTite");
 	}
 
 	/// <summary>Folder</summary>

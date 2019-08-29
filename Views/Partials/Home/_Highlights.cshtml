@@ -1,6 +1,10 @@
 ﻿@inherits UmbracoViewPage
 <section class="wrapper">
     <div class="inner">
+        <header class="special">
+            <h2>@Umbraco.AssignedContentItem.Value("highlightsHeader")</h2>
+            <p>@Umbraco.AssignedContentItem.Value("highlightsSubText")</p>
+        </header>
         <div class="highlights">
             <section>
                 <div class="content">

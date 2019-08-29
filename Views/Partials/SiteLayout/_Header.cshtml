@@ -2,7 +2,7 @@
 @using PJDu8.Web.Models
 
 <header id="header">
-    <a class="logo" href="/"><i class="icon fa-fw fa-home"></i> PJD</a>
+    <a class="logo" href="/"><i class="icon fa-fw @Umbraco.AssignedContentItem.Value("homeIconPicker")"></i> @Umbraco.AssignedContentItem.Value("homeIconTextSiteTite")</a>
     <nav>
         <a href="#menu">Menu</a>
     </nav>
@@ -13,10 +13,11 @@
     </ul>
     <hr />
     <div style="text-align:center;">
-        <h4>Get in touch</h4>
-        <i id="contact-button" class="icon hvr-grow fa-envelope-o" style="font-size:40px;"></i>
+        <h4>@Umbraco.AssignedContentItem.Value("contactText")</h4>
+        <i id="contact-button" class="icon hvr-grow @Umbraco.AssignedContentItem.Value("contactIconPicker")" style="font-size:40px;"></i>
     </div>
 </nav>
+
 
 @helper RenderChildItems(List<NavigationListItem> listItems)
 {
