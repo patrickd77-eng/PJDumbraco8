@@ -2,7 +2,7 @@
 @using PJDu8.Web.Models
 
 <header id="header">
-    <a class="logo" href="/"><i class="icon fa-fw @Umbraco.AssignedContentItem.Value("homeIconPicker")"></i> @Umbraco.AssignedContentItem.Value("homeIconTextSiteTite")</a>
+    <a class="logo" href="/"><i class="icon fa-fw @Umbraco.AssignedContentItem.Value("homeIconPicker", fallback: Fallback.ToAncestors)"></i> @Umbraco.AssignedContentItem.Value("homeIconTextSiteTite", fallback: Fallback.ToAncestors)</a>
     <nav>
         <a href="#menu">Menu</a>
     </nav>
@@ -12,9 +12,9 @@
         @RenderChildItems(Model)
     </ul>
     <hr />
-    <div style="text-align:center;">
-        <h4>@Umbraco.AssignedContentItem.Value("contactText")</h4>
-        <i id="contact-button" class="icon hvr-grow @Umbraco.AssignedContentItem.Value("contactIconPicker")" style="font-size:40px;"></i>
+    <div style="padding-top:100px;text-align:center;">
+        <h4>@Umbraco.AssignedContentItem.Value("contactText", fallback: Fallback.ToAncestors)</h4>
+        <i id="contact-button" class="icon hvr-bounce-in @Umbraco.AssignedContentItem.Value("contactIconPicker", fallback: Fallback.ToAncestors)" style="font-size:40px;color:white;"></i>
     </div>
 </nav>
 
@@ -37,7 +37,7 @@
 
                 @if (item.HasChildren)
                 {
-                    <ol style="list-style:disc !important">
+                    <ol style="list-style:disc !important" id="childItems">
                         @RenderChildItems(item.Items)
                     </ol>
                 }

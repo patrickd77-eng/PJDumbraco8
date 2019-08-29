@@ -4360,6 +4360,10 @@ body {
             #menu > ul.links > li {
                 padding: 0;
             }
+                #menu > ul.links > li > ol > li > a.active {
+                    color: red !important;
+                    font-weight: bold;
+                }
 
                 #menu > ul.links > li > a {
                     border: 0;
