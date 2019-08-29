@@ -408,6 +408,7 @@
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.html" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
+    <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\font-awesome.min.css" />
     <Content Include="assets\css\main.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
@@ -476,6 +477,7 @@
     <Content Include="Media\4xmhd424\shutterstock_1134885563-1.jpg" />
     <Content Include="Media\5b1maskl\675277-data_database_sql_query-512.png" />
     <Content Include="Media\da3n4em3\90bed23ba38357b92be6c06151c4e01e.jpg" />
+    <Content Include="Media\fiboxtxu\shutterstock_594646208.jpg" />
     <Content Include="Media\gdzb2jno\umbraco.png" />
     <Content Include="Media\hn3lyozz\bg.jpg" />
     <Content Include="Media\iu4nphfg\bootstrap-icon-png-2.png" />
@@ -485,6 +487,7 @@
     <Content Include="Media\nj5j3mo1\mvcnew.png" />
     <Content Include="Media\ox4hrnwb\shutterstock_234146047.jpg" />
     <Content Include="Media\rv4ds2em\20190728_164451.jpg" />
+    <Content Include="Media\tfff3fin\shutterstock_701412346.jpg" />
     <Content Include="Media\ts3l2t4h\bannercode.jpg" />
     <Content Include="Media\tyajvrbz\net_core_stack.png" />
     <Content Include="Media\vzekuydu\20190728_162844.jpg" />

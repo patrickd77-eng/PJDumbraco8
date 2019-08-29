@@ -7,24 +7,33 @@
 <!-- Content Grid -->
 <section class="wrapper">
     <div class="inner">
-        
-        @Html.GetGridHtml(Model, "contentGridControl")     
-        
-           @{
-               if(Umbraco.AssignedContentItem.Name == "Projects") { 
+        @Html.GetGridHtml(Model, "contentGridControl")
+    </div>
+    <div class="inner">
+            @{
+            IPublishedContent currentPage = Umbraco.Content(Umbraco.AssignedContentItem.Id);
+            IEnumerable<IPublishedContent> children = currentPage.Children();
 
-                   IPublishedContent currentPage = Umbraco.Content(Umbraco.AssignedContentItem.Id);
-                   IEnumerable<IPublishedContent>children = currentPage.Children();
-
-                       foreach (var child in children)
-                       {
-                        <div style="padding:10px;">
-                                        <h2 style="text-decoration:underline;"><i class="icon fa fa-fw fa-code-fork"></i><a href="@child.Url">@child.Name.</a></h2>
-                                        <p style="padding-left:3em;">@child.Value("cTABody",defaultValue: "test").Replace("<p>","").Replace("</p>","")</p>
-                        </div>
-                        <br />
-                       }
-               }
-          }   
+            if (Umbraco.AssignedContentItem.Name.Contains("code"))
+            {
+                foreach (var child in children)
+                {
+                    <div>
+                        <h2><i class="icon fa fa-fw fa-code"></i><a style="text-decoration:underline;" href="@child.Url"> @child.Name.</a></h2>
+                        <p style="padding-left:3em;">@child.Value("cTABody", defaultValue: "Project Details.").Replace("<p>", "").Replace("</p>", "")</p>
+                    </div>
+                }
+            }
+            else if (Umbraco.AssignedContentItem.Name.Contains("other"))
+            {
+                foreach (var child in children)
+                {
+                    <div class="inner">
+                        <h2><i class="icon fa fa-fw fa-lightbulb-o"></i><a style="text-decoration:underline;" href="@child.Url"> @child.Name.</a></h2>
+                        <p style="padding-left:3em;">@child.Value("cTABody", defaultValue: "Project Details.").Replace("<p>", "").Replace("</p>", "")</p>
+                    </div>
+                }
+            }
+        }
     </div>
 </section>

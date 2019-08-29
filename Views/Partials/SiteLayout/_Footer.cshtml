@@ -22,7 +22,7 @@
                 @{
                     if (footerLinks.Any())
                     {
-                <ul class="plain">
+                <ul class="plain" style="text-align: center;">
                     @foreach (var link in footerLinks)
                     {
                         var className = link.Name;
@@ -34,7 +34,7 @@
                         {
                             className = "graduation-cap";
                         }
-                        <li><i class="icon fa fa-fw fa-@className.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
+                        <li class="hvr-bounce-in" style="display:block !important;"><i class="icon fa fa-fw fa-@className.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
                         
                 }
                 </ul>

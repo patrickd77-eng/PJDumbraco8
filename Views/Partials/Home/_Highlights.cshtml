@@ -1,10 +1,6 @@
 ﻿@inherits UmbracoViewPage
 <section class="wrapper">
     <div class="inner">
-        <header class="special">
-            <h2>@Umbraco.AssignedContentItem.Value("highlightsHeader")</h2>
-            <p>@Umbraco.AssignedContentItem.Value("highlightsSubText")</p>
-        </header>
         <div class="highlights">
             <section>
                 <div class="content">
@@ -12,7 +8,7 @@
                         <i class="icon @Umbraco.AssignedContentItem.Value("highlightsOneIcon") hvr-bob"></i>
                         <h3>@Umbraco.AssignedContentItem.Value("highlightsOneHeader")</h3>
                     </header>
-                    <p>@Umbraco.AssignedContentItem.Value("highlightsOneText")</p>
+                    <p>@Umbraco.AssignedContentItem.Value("highlightsOneText")
                 </div>
             </section>
             <section>
@@ -21,7 +17,7 @@
                         <i class="icon @Umbraco.AssignedContentItem.Value("highlightsTwoIcon") hvr-bob"></i>
                         <h3>@Umbraco.AssignedContentItem.Value("highlightsTwoHeader")</h3>
                     </header>
-                    <p>@Umbraco.AssignedContentItem.Value("highlightsTwoText")</p>
+                    @Umbraco.AssignedContentItem.Value("highlightsTwoText")
                 </div>
             </section>
             <section>
@@ -30,7 +26,7 @@
                         <i class="icon @Umbraco.AssignedContentItem.Value("highlightsThreeIcon") hvr-bob"></i>
                         <h3>@Umbraco.AssignedContentItem.Value("highlightsThreeHeader")</h3>
                     </header>
-                    <p>@Umbraco.AssignedContentItem.Value("highlightsThreeText")</p>
+                    @Umbraco.AssignedContentItem.Value("highlightsThreeText")
                 </div>
             </section>
         </div>

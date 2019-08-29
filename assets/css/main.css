@@ -322,7 +322,7 @@ hr {
 /* Inner */
 .inner {
     margin: 0 auto;
-    width: 75rem;
+    /*width: 75rem;*/
     max-width: calc(100% - 6rem);
 }
 
@@ -724,6 +724,7 @@ ul {
 
     ul li {
         padding-left: 0.325rem;
+        padding-bottom: 0.325rem;
     }
 
     ul.plain {
@@ -4450,3 +4451,4 @@ body.is-menu-visible #menu {
     box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
     visibility: visible;
 }
+
