@@ -1476,7 +1476,7 @@ ul.actions {
 /* Grid */
 .row {
     display: inline-flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     box-sizing: border-box;
 }
 
@@ -1693,7 +1693,7 @@ ul.actions {
 @media screen and (max-width: 1680px) {
     .row {
         display: inline-flex;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
         box-sizing: border-box;
     }
 
@@ -1911,7 +1911,7 @@ ul.actions {
 @media screen and (max-width: 1280px) {
     .row {
         display: inline-flex;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
         box-sizing: border-box;
     }
 
@@ -2128,7 +2128,7 @@ ul.actions {
 
 @media screen and (max-width: 980px) {
     .row {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
         box-sizing: border-box;
     }
@@ -2564,7 +2564,7 @@ ul.actions {
 
 @media screen and (max-width: 480px) {
     .row {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
         box-sizing: border-box;
     }
@@ -3242,7 +3242,7 @@ ul.icons {
 
 @media screen and (max-width: 736px) {
     #banner {
-        height: 250px !important;
+        height: 350px !important;
         min-height: 0;
         padding: 4rem 2rem 4rem 2rem;
     }
@@ -3366,7 +3366,7 @@ body.is-preload #cta:before {
     #cta h1, #cta h2, #cta h3, #cta h4, #cta h5, #cta h6 {
         color: white;
         font-weight: bolder;
-        font-size: 60px;
+        font-size: 45px;
     }
 
     #cta blockquote {
@@ -3385,7 +3385,7 @@ body.is-preload #cta:before {
     #cta p {
         color: white;
         font-weight: bolder;
-        font-size: 45px;
+        font-size: 30px;
     }
 
     #cta input[type="submit"],
@@ -4953,7 +4953,7 @@ body.is-menu-visible #menu {
     }
 
     .col-md-4 {
-        width: 33.33333333%;
+        width: 85%;
     }
 
     .col-md-3 {
@@ -5332,5 +5332,27 @@ body.is-menu-visible #menu {
 
     .col-lg-offset-0 {
         margin-left: 0;
+    }
+}
+
+.loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: none;
+    margin: auto;
+    padding-top: 15px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }

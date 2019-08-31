@@ -11,7 +11,7 @@
             <section id="contactarea">
                 <h4 style="text-align:center">@Umbraco.AssignedContentItem.Value("contactHeader", fallback: Fallback.ToAncestors)</h4>
                 <hr />
-                <div id="contact-form-container" style="width: 60%;margin:  0 auto;">
+                <div id="contact-form-container" style="width:80%;margin:0 auto;">
                     @{ Html.RenderAction("RenderForm", "Contact"); }
                 </div>
             </section>

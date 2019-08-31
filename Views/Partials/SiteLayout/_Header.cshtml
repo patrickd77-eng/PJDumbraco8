@@ -3,6 +3,9 @@
 
 <header id="header">
     <a class="logo" href="/"><i class="icon fa-fw @Umbraco.AssignedContentItem.Value("homeIconPicker", fallback: Fallback.ToAncestors)"></i> @Umbraco.AssignedContentItem.Value("homeIconTextSiteTite", fallback: Fallback.ToAncestors)</a>
+    <div style="text-align:center;">
+        <i id="contact-button" class="icon hvr-bounce-in @Umbraco.AssignedContentItem.Value("contactIconPicker", fallback: Fallback.ToAncestors)" style="font-size:30px;color:white;"></i>
+    </div>
     <nav>
         <a style="font-size: 20px;" href="#menu">Menu</a>
     </nav>
@@ -12,10 +15,6 @@
         @RenderChildItems(Model)
     </ul>
     <hr />
-    <div style="padding-top:100px;text-align:center;">
-        <h4>@Umbraco.AssignedContentItem.Value("contactText", fallback: Fallback.ToAncestors)</h4>
-        <i id="contact-button" class="icon hvr-bounce-in @Umbraco.AssignedContentItem.Value("contactIconPicker", fallback: Fallback.ToAncestors)" style="font-size:40px;color:white;"></i>
-    </div>
 </nav>
 
 
