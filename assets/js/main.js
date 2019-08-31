@@ -19,14 +19,10 @@
     $window.on('load', function () {
         window.setTimeout(function () {
             $body.removeClass('is-preload');
-        }, 100);
+        }, 25);
     });
 
-    $window.on('load', function () {
-        window.setTimeout(function () {
-            $('#cta').removeClass('is-preload');
-        }, 10);
-    });
+
 
     // Menu.
     $('#menu')

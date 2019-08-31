@@ -2,7 +2,7 @@
 @{
     var ctaBackgroundImage = Umbraco.AssignedContentItem.Value<IPublishedContent>("cTAImage").Url;
 }
-<section style="background-image: url(@ctaBackgroundImage)" id="cta" class="wrapper is-preload">
+<section style="background-image: url(@ctaBackgroundImage)" id="cta" class="wrapper">
     <div class="inner">
         <h1>@Umbraco.AssignedContentItem.Value("cTAHeader")</h1>
         <div style="font-size:20px;font-weight:bold;">@Umbraco.AssignedContentItem.Value("cTABody")</div>
