@@ -1,18 +1,2 @@
 ﻿<h3> Thanks! <i class="icon fa-fw fa-smile-o"></i></h3>
 <p>It looks like your message has been sent OK. I'll be in touch soon!</p>
-<button onclick="(function () {
-    $('#spamWarning').text('Please wait while the form resets.');
-    $('#spamWarning').css('display', 'inline');
-    $('#spamWarning').animate()
-   setTimeout(function () {
-    $('#form-result').hide();
-   $('#form-outer').show();
-       return false;
-       }, 5000);
-})();return false;">
-    Send another?
-</button>
-<br />
-<div>
-    <p style="display:none;" id="spamWarning"></p>
-</div>

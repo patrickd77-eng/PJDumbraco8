@@ -2,22 +2,21 @@
 @using PJDu8.Web.Models
 
 <header id="header">
-    <a class="logo" href="/"><i class="icon fa-fw @Umbraco.AssignedContentItem.Value("homeIconPicker", fallback: Fallback.ToAncestors)"></i> @Umbraco.AssignedContentItem.Value("homeIconTextSiteTite", fallback: Fallback.ToAncestors)</a>
+    <a class="logo" href="/"><i class="icon fa-fw @Umbraco.AssignedContentItem.Value("homeIconPicker", fallback: Fallback.ToAncestors)"></i></a>
     <div style="text-align:center;">
-        <i id="contact-button" class="icon hvr-bounce-in @Umbraco.AssignedContentItem.Value("contactIconPicker", fallback: Fallback.ToAncestors)" style="font-size:30px;color:white;"></i>
+        <a href="#"><i id="contact-button" class="icon @Umbraco.AssignedContentItem.Value("contactIconPicker", fallback: Fallback.ToAncestors)" style="font-size:26px;color:white;padding-right:15px;padding-top:15px;"></i></a>
     </div>
     <nav>
-        <a style="font-size: 20px;" href="#menu">Menu</a>
+        <a style="font-size: 26px;" href="#menu"></a>
     </nav>
 </header>
 <nav id="menu" role="navigation">
+    <h3>Navigation</h3>
     <ul class="links">
         @RenderChildItems(Model)
     </ul>
     <hr />
 </nav>
-
-
 @helper RenderChildItems(List<NavigationListItem> listItems)
 {
     if (listItems != null)

@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5f8cb257ebb0658c")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "820f682f371558db")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -204,13 +204,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("homeIconPicker")]
 		public object HomeIconPicker => GlobalMenuControls.GetHomeIconPicker(this);
-
-		///<summary>
-		/// Home Icon Text / Site Tite: Text for top leftmost of page.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeIconTextSiteTite")]
-		public string HomeIconTextSiteTite => GlobalMenuControls.GetHomeIconTextSiteTite(this);
 
 		///<summary>
 		/// Copyright Owner: Site's Copyright Tag
@@ -806,10 +799,6 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Home Icon Picker</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		object HomeIconPicker { get; }
-
-		/// <summary>Home Icon Text / Site Tite</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		string HomeIconTextSiteTite { get; }
 	}
 
 	/// <summary>Global Menu Controls</summary>
@@ -847,17 +836,6 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Home Icon Picker</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static object GetHomeIconPicker(IGlobalMenuControls that) => that.Value("homeIconPicker");
-
-		///<summary>
-		/// Home Icon Text / Site Tite: Text for top leftmost of page.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("homeIconTextSiteTite")]
-		public string HomeIconTextSiteTite => GetHomeIconTextSiteTite(this);
-
-		/// <summary>Static getter for Home Icon Text / Site Tite</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static string GetHomeIconTextSiteTite(IGlobalMenuControls that) => that.Value<string>("homeIconTextSiteTite");
 	}
 
 	/// <summary>Folder</summary>
