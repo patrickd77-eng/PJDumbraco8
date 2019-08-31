@@ -1475,7 +1475,7 @@ ul.actions {
 
 /* Grid */
 .row {
-    display: flow-root;
+    display: inline-flex;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
@@ -1692,7 +1692,7 @@ ul.actions {
 
 @media screen and (max-width: 1680px) {
     .row {
-        display: flow-root;
+        display: inline-flex;
         flex-wrap: wrap;
         box-sizing: border-box;
     }
@@ -1910,7 +1910,7 @@ ul.actions {
 
 @media screen and (max-width: 1280px) {
     .row {
-        display: flow-root;
+        display: inline-flex;
         flex-wrap: wrap;
         box-sizing: border-box;
     }
@@ -2346,7 +2346,7 @@ ul.actions {
 
 @media screen and (max-width: 736px) {
     .row {
-        display: flow-root;
+        display: inline-flex;
         flex-wrap: wrap;
         box-sizing: border-box;
     }
