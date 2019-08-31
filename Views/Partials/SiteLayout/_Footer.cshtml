@@ -2,7 +2,7 @@
 @using Umbraco.Web.Models
 
 @{
-   IEnumerable<Link> footerLinks = Umbraco.AssignedContentItem.Value<IEnumerable<Link>>("footerLinks", fallback: Fallback.ToAncestors); 
+    IEnumerable<Link> footerLinks = Umbraco.AssignedContentItem.Value<IEnumerable<Link>>("footerLinks", fallback: Fallback.ToAncestors);
 }
 
 <footer id="footer">
@@ -11,36 +11,36 @@
             <section id="contactarea">
                 <h4 style="text-align:center">@Umbraco.AssignedContentItem.Value("contactHeader", fallback: Fallback.ToAncestors)</h4>
                 <hr />
-                <div id="contact-form-container">
+                <div id="contact-form-container" style="width: 60%;margin:  0 auto;">
                     @{ Html.RenderAction("RenderForm", "Contact"); }
                 </div>
             </section>
             <section></section>
             <section>
-                <h4 style="text-align:center">@Umbraco.AssignedContentItem.Value("footerLinkTitle", fallback:Fallback.ToAncestors)</h4>
-                <hr />           
+                <h4 style="text-align:center">@Umbraco.AssignedContentItem.Value("footerLinkTitle", fallback: Fallback.ToAncestors)</h4>
+                <hr />
                 @{
                     if (footerLinks.Any())
                     {
-                <ul class="plain" style="text-align: center;">
-                    @foreach (var link in footerLinks)
-                    {
-                        var className = link.Name;
-                        if (className.Contains("Email"))
-                        {
-                            className = "envelope-o";
-                        }
-                        else if (className.Contains("Course"))
-                        {
-                            className = "graduation-cap";
-                        }
-                        <li class="hvr-bounce-in" style="display:block !important;"><i class="icon fa fa-fw fa-@className.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
-                        
-                }
-                </ul>
+                        <ul class="plain" style="text-align: center;">
+                            @foreach (var link in footerLinks)
+                            {
+                                var className = link.Name;
+                                if (className.Contains("Email"))
+                                {
+                                    className = "envelope-o";
+                                }
+                                else if (className.Contains("Course"))
+                                {
+                                    className = "graduation-cap";
+                                }
+                                <li class="hvr-bounce-in" style="display:block !important;"><i class="icon fa fa-fw fa-@className.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
+
+                            }
+                        </ul>
                     }
 
-        }
+                }
             </section>
         </div>
     </div>
