@@ -12,8 +12,12 @@
 
     },
     showResult: function () {
-        $('#form-outer').hide();
-        $('#form-result').show();
+        $('#form-outer').hide("fast");
+        $('#form-result').show("slow");
+        setTimeout(function () {
+            $('#form-outer').show("slow");
+            $('#form-result').hide("fast");
+        }, 5000);
     }
 }
 

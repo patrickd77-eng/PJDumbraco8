@@ -23,7 +23,10 @@ namespace PJDu8.Controllers
         /// Renders the top navigation in the header partial
         /// </summary>
         /// <returns>A List of NavigationListItems, representing the structure of the site.</returns>
-
+        public ActionResult RenderScripts()
+        {
+            return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Scripts.cshtml");
+        }
         public ActionResult RenderNavigation()
         {
             List<NavigationListItem> nav = GetObjectFromCache<List<NavigationListItem>>("mainNav", 5, GetNavigationModelFromDatabase);
@@ -31,7 +34,7 @@ namespace PJDu8.Controllers
         }
         public ActionResult RenderFooter()
         {
-         
+
             return PartialView(PARTIAL_VIEW_FOLDER_PATH + "_Footer.cshtml");
         }
         public ActionResult RenderCTA()
@@ -40,9 +43,6 @@ namespace PJDu8.Controllers
         }
         private List<NavigationListItem> GetNavigationModelFromDatabase()
         {
-            //const int HOME_PAGE_POSITION_IN_PATH = 1;
-            //int homePageId = int.Parse(CurrentPage.Path.Split(',')[HOME_PAGE_POSITION_IN_PATH]);
-            //IPublishedContent homePage = Umbraco.Content(homePageId);
             IPublishedContent homePage = CurrentPage.AncestorOrSelf(1).DescendantOrSelf().AsEnumerableOfOne().FirstOrDefault(x => x.IsDocumentType("HomePage"));
 
             List<NavigationListItem> nav = new List<NavigationListItem>();
@@ -67,7 +67,9 @@ namespace PJDu8.Controllers
                 {
                     NavigationListItem listItem = new NavigationListItem(new NavigationLink(childPage.Url, childPage.Name));
                     listItem.Items = GetChildNavigationList(childPage);
+
                     listItems.Add(listItem);
+
                 }
             }
             return listItems;
