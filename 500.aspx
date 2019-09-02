@@ -1,5 +1,5 @@
 ﻿<% Response.StatusCode = 500;%>
-<html class="gr__pjdu8_conveyor_cloud">
+<html>
 <!-- Head (meta) -->
 <head>
     <title>Error | PJD</title>
