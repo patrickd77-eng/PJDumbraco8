@@ -485,7 +485,6 @@
     <Content Include="Media\gdzb2jno\umbraco.png" />
     <Content Include="Media\hn3lyozz\bg.jpg" />
     <Content Include="Media\iu4nphfg\bootstrap-icon-png-2.png" />
-    <Content Include="Media\jvanyn14\shutterstock_251560003.jpg" />
     <Content Include="Media\jx5fsmo0\cta01.jpg" />
     <Content Include="Media\lpwfz2n1\font-awesome-logo-3010fe2434-seeklogo-com.png" />
     <Content Include="Media\n1ygu0sg\20190728_163538.jpg" />
@@ -2523,6 +2522,7 @@
     <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Media\jvanyn14\" />
     <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <PropertyGroup>
