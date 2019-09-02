@@ -15,8 +15,8 @@
 }
 <section id="banner">
     <div class="inner">
-        <h1>@Umbraco.AssignedContentItem.Value("homepageBannerTitle")</h1>
-        @Umbraco.AssignedContentItem.Value("homepageBannerSubTitle")
+        <h1>@Umbraco.AssignedContentItem.Value("homepageBannerTitle", defaultValue: "No Content Found")</h1>
+        @Umbraco.AssignedContentItem.Value("homepageBannerSubTitle", defaultValue: "No Content Found")
     </div>
     <img src="@backgroundImage" />
 </section>

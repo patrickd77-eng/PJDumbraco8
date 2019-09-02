@@ -2,35 +2,35 @@
 <section class="wrapper">
     <div class="inner">
         <header class="special">
-            <h2>@Umbraco.AssignedContentItem.Value("highlightsHeader")</h2>
-            <p>@Umbraco.AssignedContentItem.Value("highlightsSubText")</p>
+            <h2>@Umbraco.AssignedContentItem.Value("highlightsHeader", defaultValue: "No Content Found")</h2>
+            @Umbraco.AssignedContentItem.Value("highlightsSubText", defaultValue: "No Content Found")
         </header>
         <div class="highlights">
             <section>
                 <div class="content">
                     <header>
-                        <i class="icon @Umbraco.AssignedContentItem.Value("highlightsOneIcon") hvr-bob"></i>
-                        <h3>@Umbraco.AssignedContentItem.Value("highlightsOneHeader")</h3>
+                        <i class="icon @Umbraco.AssignedContentItem.Value("highlightsOneIcon",defaultValue:"No Content Found") hvr-bob"></i>
+                        <h3>@Umbraco.AssignedContentItem.Value("highlightsOneHeader", defaultValue: "No Content Found")</h3>
                     </header>
-                    <p>@Umbraco.AssignedContentItem.Value("highlightsOneText")
+                    @Umbraco.AssignedContentItem.Value("highlightsOneText", defaultValue: "No Content Found")
                 </div>
             </section>
             <section>
                 <div class="content">
                     <header>
-                        <i class="icon @Umbraco.AssignedContentItem.Value("highlightsTwoIcon") hvr-bob"></i>
-                        <h3>@Umbraco.AssignedContentItem.Value("highlightsTwoHeader")</h3>
+                        <i class="icon @Umbraco.AssignedContentItem.Value("highlightsTwoIcon",defaultValue:"No Content Found") hvr-bob"></i>
+                        <h3>@Umbraco.AssignedContentItem.Value("highlightsTwoHeader", defaultValue: "No Content Found")</h3>
                     </header>
-                    @Umbraco.AssignedContentItem.Value("highlightsTwoText")
+                    @Umbraco.AssignedContentItem.Value("highlightsTwoText", defaultValue: "No Content Found")
                 </div>
             </section>
             <section>
                 <div class="content">
                     <header>
-                        <i class="icon @Umbraco.AssignedContentItem.Value("highlightsThreeIcon") hvr-bob"></i>
-                        <h3>@Umbraco.AssignedContentItem.Value("highlightsThreeHeader")</h3>
+                        <i class="icon @Umbraco.AssignedContentItem.Value("highlightsThreeIcon",defaultValue:"No Content Found") hvr-bob"></i>
+                        <h3>@Umbraco.AssignedContentItem.Value("highlightsThreeHeader", defaultValue: "No Content Found")</h3>
                     </header>
-                    @Umbraco.AssignedContentItem.Value("highlightsThreeText")
+                    @Umbraco.AssignedContentItem.Value("highlightsThreeText", defaultValue: "No Content Found")
                 </div>
             </section>
         </div>

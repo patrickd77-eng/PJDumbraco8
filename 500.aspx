@@ -49,7 +49,7 @@
     <footer id="footer">
         <div class="outer">
             <div class="copyright" style="border: none; padding: 0px;">
-                <div style="font-size: 16px; color: white;">Copyright | Patrick Jonathan Davis | © | 2019</div>
+                <div style="font-size: 16px; color: white;">Patrick Jonathan Davis | © | 2019</div>
                 <br>
                 <p style="font-size: 9px;">Page design by www.templated.co</p>
             </div>
