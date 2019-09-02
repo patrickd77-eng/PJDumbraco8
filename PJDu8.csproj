@@ -475,15 +475,20 @@
     <Content Include="assets\js\jquery.validate.unobtrusive.js" />
     <Content Include="assets\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="assets\js\modernizr-2.8.3.js" />
+    <Content Include="Media\1bshtzyg\motherboard.jpg" />
     <Content Include="Media\2u4dldsi\shutterstock_606606557.jpg" />
     <Content Include="Media\2xrlmalt\shutterstock_678235795.jpg" />
     <Content Include="Media\3g1p0dyq\shutterstock_1095777998.jpg" />
     <Content Include="Media\4xmhd424\shutterstock_1134885563-1.jpg" />
     <Content Include="Media\5b1maskl\675277-data_database_sql_query-512.png" />
+    <Content Include="Media\agbdismp\code_letters_screen_135985_1920x1080.jpg" />
     <Content Include="Media\da3n4em3\90bed23ba38357b92be6c06151c4e01e.jpg" />
     <Content Include="Media\fiboxtxu\shutterstock_594646208.jpg" />
     <Content Include="Media\gdzb2jno\umbraco.png" />
+    <Content Include="Media\hm0ppwso\durdle-door-wallpapers-27848-50636.jpg" />
     <Content Include="Media\hn3lyozz\bg.jpg" />
+    <Content Include="Media\hyujs3ko\durdle-door-wallpapers-27848-7841108.jpg" />
+    <Content Include="Media\iefbepxg\code_text_programming_146694_1920x1080.jpg" />
     <Content Include="Media\iu4nphfg\bootstrap-icon-png-2.png" />
     <Content Include="Media\jx5fsmo0\cta01.jpg" />
     <Content Include="Media\lpwfz2n1\font-awesome-logo-3010fe2434-seeklogo-com.png" />
@@ -494,6 +499,7 @@
     <Content Include="Media\pcpd3iu4\20190728_163541.jpg" />
     <Content Include="Media\rv4ds2em\20190728_164451.jpg" />
     <Content Include="Media\tfff3fin\shutterstock_701412346.jpg" />
+    <Content Include="Media\tozfwnqc\wp4131752-funk-music-wallpapers.jpg" />
     <Content Include="Media\ts3l2t4h\bannercode.jpg" />
     <Content Include="Media\tyajvrbz\net_core_stack.png" />
     <Content Include="Media\uojpy33k\20190728_162844-1.jpg" />
@@ -504,6 +510,7 @@
     <Content Include="Media\Web.config" />
     <Content Include="Media\wjxalcuk\foxprint-3156.jpg" />
     <Content Include="Media\xaafbgin\shutterstock_511444168.jpg" />
+    <Content Include="Media\xktfy3gf\textiles-long.jpg" />
     <Content Include="Media\z1tbvu52\img_20190708_132316.jpg" />
     <Content Include="Media\zsygzgjx\shutterstock_738736033.jpg" />
     <Content Include="Umbraco\assets\css\canvasdesigner.css" />

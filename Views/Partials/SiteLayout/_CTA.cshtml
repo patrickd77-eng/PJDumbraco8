@@ -1,17 +1,8 @@
 ﻿@inherits  UmbracoViewPage
 @{
 
-    var ctaBackgroundImage = "";
-    try
-    {
-        ctaBackgroundImage = Umbraco.AssignedContentItem.Value<IPublishedContent>("siteBannerImage").Url;
+    var ctaBackgroundImage = Umbraco.AssignedContentItem.Value<IPublishedContent>("cTAImage").Url;
 
-    }
-    catch (Exception)
-    {
-        ctaBackgroundImage = "notfound.jpg";
-
-    }
 }
 
 

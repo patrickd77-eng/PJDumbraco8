@@ -1,22 +1,11 @@
 ﻿@inherits UmbracoViewPage
 @{
-    var backgroundImage = "";
-    try
-    {
-        backgroundImage = Umbraco.AssignedContentItem.Value<IPublishedContent>("siteBannerImage").Url;
-
-    }
-    catch (Exception)
-    {
-        backgroundImage = "notfound.jpg";
-
-    }
-
+    var backgroundImage = Umbraco.AssignedContentItem.Value<IPublishedContent>("bannerBackgroundImage").Url;
 }
 <section id="banner">
     <div class="inner">
-        <h1>@Umbraco.AssignedContentItem.Value("homepageBannerTitle", defaultValue: "No Content Found")</h1>
-        @Umbraco.AssignedContentItem.Value("homepageBannerSubTitle", defaultValue: "No Content Found")
+        <h1>@Umbraco.AssignedContentItem.Value("homepageBannerTitle")</h1>
+        @Umbraco.AssignedContentItem.Value("homepageBannerSubTitle")
     </div>
     <img src="@backgroundImage" />
 </section>

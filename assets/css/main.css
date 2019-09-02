@@ -1624,7 +1624,7 @@ ul.actions {
 
     .row.gtr-50 {
         margin-top: 0;
-        margin-left: -1.5rem;
+        /*margin-left: -1.5rem;*/
     }
 
         .row.gtr-50 > * {
@@ -1632,7 +1632,7 @@ ul.actions {
         }
 
         .row.gtr-50.gtr-uniform {
-            margin-top: -1.5rem;
+            /*margin-top: -1.5rem;*/
         }
 
             .row.gtr-50.gtr-uniform > * {
@@ -1841,7 +1841,7 @@ ul.actions {
 
         .row.gtr-50 {
             margin-top: 0;
-            margin-left: -1.5rem;
+            /*margin-left: -1.5rem;*/
         }
 
             .row.gtr-50 > * {
@@ -1849,7 +1849,7 @@ ul.actions {
             }
 
             .row.gtr-50.gtr-uniform {
-                margin-top: -1.5rem;
+                /*margin-top: -1.5rem;*/
             }
 
                 .row.gtr-50.gtr-uniform > * {
@@ -1858,7 +1858,7 @@ ul.actions {
 
     .row {
         margin-top: 0;
-        margin-left: -3rem;
+        /*margin-left: -3rem;*/
     }
 
         .row > * {
@@ -2076,7 +2076,7 @@ ul.actions {
 
     .row {
         margin-top: 0;
-        margin-left: -1.5rem;
+        /*margin-left: -1.5rem;*/
     }
 
         .row > * {
@@ -2084,7 +2084,7 @@ ul.actions {
         }
 
         .row.gtr-uniform {
-            margin-top: -1.5rem;
+            /*margin-top: -1.5rem;*/
         }
 
             .row.gtr-uniform > * {
@@ -2328,7 +2328,7 @@ ul.actions {
 
         .row.gtr-200 {
             margin-top: 0;
-            margin-left: -3rem;
+            /*margin-left: -3rem;*/
         }
 
             .row.gtr-200 > * {
@@ -3208,7 +3208,7 @@ ul.icons {
         display: block;
         height: 100%;
         left: 0;
-        opacity: 0.45;
+        opacity: 0.65;
         position: absolute;
         top: 0;
         width: 100%;
