@@ -39,9 +39,9 @@
     <!-- Content Grid -->
     <section class="wrapper">
         <div class="inner" style="text-align: center;">
-            <h1 style="text-align: center;">YOU'RE LOST, OR THERE'S AN ERROR. <a style="text-decoration: underline" href="/">CLICK ME.</a> :)</h1>
+            <h1 style="text-align: center;">NOT FOUND. <a style="text-decoration: underline" href="/">CLICK ME TO GO HOME.</a> :)</h1>
             <hr />
-            <p style="text-align: center;">If the problem persists, please <a style="text-decoration: underline;" href="mailto:patrick_Davis_97@hotmail.co.uk">contact me via email.</a></p>
+            <p style="text-align: center;">If you have a question, please <a style="text-decoration: underline;" href="mailto:patrick_Davis_97@hotmail.co.uk">contact me via email.</a></p>
             <img height="400" src="/error.jpg" alt="error" />
             <p style="text-align: center;">404.</p>
         </div>
