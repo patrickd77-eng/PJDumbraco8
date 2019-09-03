@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "820f682f371558db")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "39d011303aba673c")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
@@ -258,13 +258,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("contactIconPicker")]
 		public object ContactIconPicker => NavBarControls.GetContactIconPicker(this);
-
-		///<summary>
-		/// Contact Text: Text for contact icon
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("contactText")]
-		public string ContactText => NavBarControls.GetContactText(this);
 	}
 
 	/// <summary>General Content Page</summary>
@@ -722,10 +715,6 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Contact Icon</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		object ContactIconPicker { get; }
-
-		/// <summary>Contact Text</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		string ContactText { get; }
 	}
 
 	/// <summary>Global Nav Bar Controls</summary>
@@ -763,17 +752,6 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Contact Icon</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static object GetContactIconPicker(INavBarControls that) => that.Value("contactIconPicker");
-
-		///<summary>
-		/// Contact Text: Text for contact icon
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("contactText")]
-		public string ContactText => GetContactText(this);
-
-		/// <summary>Static getter for Contact Text</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static string GetContactText(INavBarControls that) => that.Value<string>("contactText");
 	}
 
 	// Mixin Content Type with alias "globalMenuControls"

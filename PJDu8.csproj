@@ -414,6 +414,7 @@
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.html" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
     <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\hvrcss.css" />
     <Content Include="assets\css\main.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\js\breakpoints.min.js" />
