@@ -6,9 +6,7 @@
 @{ Html.RenderAction("RenderCTA", "SiteLayout");}
 <!-- Content Grid -->
 <section class="wrapper">
-
     @Html.GetGridHtml(Model, "contentGridControl", "bootstrap3")
-
     <div class="inner" style="text-align: center;">
         @{
             IPublishedContent currentPage = Umbraco.Content(Umbraco.AssignedContentItem.Id);
@@ -18,18 +16,7 @@
             {
                 foreach (var child in children)
                 {
-
                     <h2 class="hvr-bob"><i class="icon fa fa-fw fa-code"></i><a style="text-decoration:underline;" href="@child.Url"> @child.Name.</a></h2>
-                    <p style="padding-left:3em;">@child.Value("cTABody", defaultValue: "Project Details.").Replace("<p>", "").Replace("</p>", "")</p>
-
-                }
-            }
-            else if (Umbraco.AssignedContentItem.Name == "Other Projects")
-            {
-                foreach (var child in children)
-                {
-
-                    <h2 class="hvr-bob"><i class="icon fa fa-fw fa-lightbulb-o"></i><a style="text-decoration:underline;" href="@child.Url"> @child.Name.</a></h2>
                     <p style="padding-left:3em;">@child.Value("cTABody", defaultValue: "Project Details.").Replace("<p>", "").Replace("</p>", "")</p>
 
                 }
