@@ -407,6 +407,5 @@ MigrationBackup/
 **/App_Data/Models/ood.flag
 
 # End of https://www.gitignore.io/api/windows,umbraco,visualstudio
-/connectionStringsDevelopment.config
-/connectionStringsUAT.config
+/connectionstrings.config
 /connectionStringsLIVE.config
