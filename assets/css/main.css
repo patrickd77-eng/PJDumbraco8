@@ -1641,7 +1641,7 @@ ul.actions {
 
 .row {
     margin-top: 0;
-    margin-left: 3rem;
+    /*margin-left: 3rem;*/
 }
 
     .row > * {
@@ -2294,7 +2294,7 @@ ul.actions {
 
     .row {
         margin-top: 0;
-        margin-left: -1.5rem;
+        /*margin-left: -1.5rem;*/
     }
 
         .row > * {
@@ -2302,7 +2302,7 @@ ul.actions {
         }
 
         .row.gtr-uniform {
-            margin-top: -1.5rem;
+            /*margin-top: -1.5rem;*/
         }
 
             .row.gtr-uniform > * {
@@ -2512,7 +2512,7 @@ ul.actions {
 
     .row {
         margin-top: 0;
-        margin-left: -1.25rem;
+        /*margin-left: -1.25rem;*/
     }
 
         .row > * {
@@ -2730,7 +2730,7 @@ ul.actions {
 
     .row {
         margin-top: 0;
-        margin-left: -1.25rem;
+        /*margin-left: -1.25rem;*/
     }
 
         .row > * {
