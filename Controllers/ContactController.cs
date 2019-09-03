@@ -45,8 +45,8 @@ namespace PJDu8.Controllers
                 string toAddress = System.Web.Configuration.WebConfigurationManager.AppSettings["ContactEmailTo"];
                 string fromAddress = System.Web.Configuration.WebConfigurationManager.AppSettings["ContactEmailFrom"];
 
-                message.Subject = $"You have a new enquiry from: {model.Name} - and their email is: {model.Email}";
-                message.Body = $"{model.Message}";
+                message.Subject = $"New website enquiry from: {model.Name}";
+                message.Body = $"Their message is: {model.Message} ||| Their email is: {model.Email}";
                 message.To.Add(new MailAddress(toAddress, toAddress));
                 message.From = (new MailAddress(fromAddress, fromAddress));
 
