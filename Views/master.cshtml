@@ -4,6 +4,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147192021-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-147192021-1');
+    </script>
     @{ Html.RenderAction("RenderMetadata", "SiteLayout");}
 </head>
 <body class="is-preload">
