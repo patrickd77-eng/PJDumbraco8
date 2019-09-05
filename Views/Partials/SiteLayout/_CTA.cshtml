@@ -1,11 +1,9 @@
 ﻿@inherits  UmbracoViewPage
 @{
-
     var ctaBackgroundImage = Umbraco.AssignedContentItem.Value<IPublishedContent>("cTAImage").Url;
 
 }
-
-
+<!-- CTA -->
 <section style="background-image: url(@ctaBackgroundImage)" id="cta" class="wrapper">
     <div class="inner">
         <h1>@Umbraco.AssignedContentItem.Value("cTAHeader")</h1>

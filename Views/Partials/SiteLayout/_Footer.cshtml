@@ -4,7 +4,7 @@
 @{
     IEnumerable<Link> footerLinks = Umbraco.AssignedContentItem.Value<IEnumerable<Link>>("footerLinks", fallback: Fallback.ToAncestors);
 }
-
+<!-- Footer -->
 <footer id="footer">
     <div class="inner">
         <div class="content">
@@ -35,11 +35,9 @@
                                     className = "graduation-cap";
                                 }
                                 <li class="hvr-bounce-in" style="display:block !important;"><i class="icon fa fa-fw fa-@className.ToLower()"></i><a href="@link.Url" target="@link.Target">@link.Name</a></li>
-
                             }
                         </ul>
                     }
-
                 }
             </section>
         </div>
@@ -51,6 +49,5 @@
             <br />
             <p style="font-size:9px;">@Umbraco.AssignedContentItem.Value("pageStylingCredit", fallback: Fallback.ToAncestors)</p>
         </div>
-
     </div>
 </footer>

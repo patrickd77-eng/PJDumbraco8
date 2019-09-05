@@ -1,22 +1,15 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 <!DOCTYPE HTML>
 <html>
-<!-- Head (meta) -->
 <head>
     @{ Html.RenderAction("RenderMetadata", "SiteLayout");}
 </head>
-<!-- Body -->
 <body class="is-preload">
-    <!-- Header and Nav -->
     @{ Html.RenderAction("RenderNavigation", "SiteLayout");}
-
     @RenderBody()
-    <!-- Footer -->
     @{ Html.RenderAction("RenderFooter", "SiteLayout");}
-    <!-- Scripts -->
     @{ Html.RenderAction("RenderScripts", "SiteLayout");}
 </body>
 </html>
