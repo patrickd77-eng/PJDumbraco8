@@ -11,7 +11,7 @@
         {
             foreach (var section in Model.sections)
             {
-                <div class="grid-section">
+                <div style="padding-left:0px;" class="grid-section">
                     @foreach (var row in section.rows)
                     {
                         @renderRow(row, true);
@@ -26,7 +26,7 @@
                 <div class="row">
                     @foreach (var s in Model.sections)
                     {
-                        <div class="grid-section">
+                        <div class="grid-section" style="padding-left:0px;">
                             <div class="col-md-@s.grid column">
                                 @foreach (var row in s.rows)
                                 {

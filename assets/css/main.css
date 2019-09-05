@@ -1474,6 +1474,10 @@ ul.actions {
 }
 
 /* Grid */
+.grid-section {
+    padding: 0 !important;
+}
+
 .row {
     display: inline-flex;
     /*flex-wrap: wrap;*/
