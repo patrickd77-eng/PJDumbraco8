@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "39d011303aba673c")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "cd2b3614c55fb9c9")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -190,13 +190,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("footerLinkTitle")]
 		public string FooterLinkTitle => FooterControls.GetFooterLinkTitle(this);
-
-		///<summary>
-		/// Page Styling Credit: The credit tag for page's front end design (templated.co)
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageStylingCredit")]
-		public string PageStylingCredit => FooterControls.GetPageStylingCredit(this);
 
 		///<summary>
 		/// Home Icon Picker: Home Icon
@@ -500,10 +493,6 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Footer Link Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		string FooterLinkTitle { get; }
-
-		/// <summary>Page Styling Credit</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		string PageStylingCredit { get; }
 	}
 
 	/// <summary>Global Footer Controls</summary>
@@ -574,17 +563,6 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Footer Link Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		public static string GetFooterLinkTitle(IFooterControls that) => that.Value<string>("footerLinkTitle");
-
-		///<summary>
-		/// Page Styling Credit: The credit tag for page's front end design (templated.co)
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageStylingCredit")]
-		public string PageStylingCredit => GetPageStylingCredit(this);
-
-		/// <summary>Static getter for Page Styling Credit</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		public static string GetPageStylingCredit(IFooterControls that) => that.Value<string>("pageStylingCredit");
 	}
 
 	// Mixin Content Type with alias "globalMetaControls"

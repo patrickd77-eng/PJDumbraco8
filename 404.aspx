@@ -33,7 +33,6 @@
     <section style="background-image: url(/media/jx5fsmo0/cta01.jpg)" id="cta" class="wrapper">
         <div class="inner">
             <h1>Woops!</h1>
-
         </div>
     </section>
     <!-- Content Grid -->
@@ -51,8 +50,6 @@
         <div class="outer">
             <div class="copyright" style="border: none; padding: 0px;">
                 <div style="font-size: 16px; color: white;">Patrick Jonathan Davis | © | 2019</div>
-                <br>
-                <p style="font-size: 9px;">Page design by www.templated.co</p>
             </div>
         </div>
     </footer>
