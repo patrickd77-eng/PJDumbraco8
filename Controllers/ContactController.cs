@@ -40,13 +40,15 @@ namespace PJDu8.Controllers
             try
             {
                 MailMessage message = new MailMessage();
-                SmtpClient client = new SmtpClient();
+                SmtpClient client = new SmtpClient();           
 
                 string toAddress = System.Web.Configuration.WebConfigurationManager.AppSettings["ContactEmailTo"];
                 string fromAddress = System.Web.Configuration.WebConfigurationManager.AppSettings["ContactEmailFrom"];
 
+                
+                message.IsBodyHtml = true;
                 message.Subject = $"New website enquiry from: {model.Name}.";
-                message.Body = $"Their message is: {model.Message} ||| Their email is: {model.Email}";
+                message.Body = $"Their email is: <h4>{model.Email}</h4> <br /> Their message is: <br /> <p>{model.Message}</p>";
                 message.To.Add(new MailAddress(toAddress, toAddress));
                 message.From = (new MailAddress(fromAddress, fromAddress));
 
