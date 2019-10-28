@@ -8,4 +8,4 @@ The only reason I switched to a SPA is that I no longer have access/want to use 
 
 
 
-[My projects list and nav bar]("https://i.gyazo.com/d243032a8ae0797bc7c0884d897f91b3.png")
+[My projects list and nav bar](https://i.gyazo.com/d243032a8ae0797bc7c0884d897f91b3.png)
